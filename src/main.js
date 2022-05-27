@@ -1,31 +1,24 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, ipcMain, net } = require('electron');
+const { app, BrowserWindow, ipcMain, net, dialog } = require('electron');
 const path = require('path');
 const { isMainThread } = require('worker_threads');
 const fetch = require('node-fetch');
 const fs = require('fs');
 const Datastore = require('nedb');
 const { join } = require('path');
-require('dotenv').config();
+const dotenv = require('dotenv').config();
 const https = require('https');
 const { createServer } = require('http');
 const WebSocket = require('ws');
 
-/*
 const httpsAgent = new https.Agent({
-  cert: fs.readFileSync("riotgames.pem"),
-  rejectUnauthorized: false,
-});
-*/
-
-const httpsAgent = new https.Agent({
+  //cert: fs.readFileSync("src/riotgames.pem"),
   rejectUnauthorized: false,
 });
 
 const base = "https://na1.api.riotgames.com";
 let key = process.env.KEY;
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
-const installpath = 'C:\\Games\\Riot Games\\League of Legends\\';
 
 const options = {
   "method": "get",
@@ -40,11 +33,12 @@ let window;
 function createWindow() {
   // Create the browser window.
   window = new BrowserWindow({
-    width: 800,
+    width: 660,
     height: 900,
     minWidth: 400,
     minHeight: 300,
     frame: false,
+    useContentSize: true,
     autoHideMenuBar: true,
     backgroundColor: '#FFF',
     webPreferences: {
@@ -53,16 +47,20 @@ function createWindow() {
       contextIsolation: true,
       preload: path.join(__dirname, "preload.js"),
     },
-    x: 1110,
+
+    x: 1230,
     y: 50,
   })
 
   // and load the url of the app.
   window.loadFile('./src/public/index.html')
-  // window.loadFile('./public/champ_pages/shyvana.html')
+
+  // window.loadFile('./src/public/champ_pages/shyvana.html')
 
   // Open the DevTools.
   window.webContents.openDevTools()
+  // Set Zoom Factor
+  window.webContents.setZoomFactor(1.0);
 }
 
 // This method will be called when Electron has finished initialization and is ready to create browser windows. Some APIs can only be used after this event occurs.
@@ -72,6 +70,21 @@ app.whenReady().then(() => {
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
+
+    // choose folder
+    dialog.showOpenDialog({
+      title: "Select a folder",
+      properties: ["openDirectory"]
+    }, (folderPaths) => {
+      // folderPaths is an array that contains all the selected paths
+      if (fileNames === undefined) {
+        console.log("No destination folder selected");
+        return;
+      } else {
+        console.log(folderPaths);
+      }
+    });
+
   })
 })
 
@@ -80,9 +93,11 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
 
-const runes = new Datastore('./src/runes.db')
+app.commandLine.appendSwitch('force-device-scale-factor', 1)
+
+const runes = new Datastore('src/runes.db')
 runes.loadDatabase();
-const favorites = new Datastore('./src/favorites.db')
+const favorites = new Datastore('src/favorites.db')
 favorites.loadDatabase();
 
 // Get runes from database
@@ -126,9 +141,6 @@ ipcMain.on('close', () => {
 })
 
 // Local API calls
-ipcMain.on('test', (event, args) => {
-  console.log('api call received');
-})
 
 // Call League API for summoner id 
 ipcMain.handle('name', async (event, name) => {
@@ -140,20 +152,32 @@ ipcMain.handle('name', async (event, name) => {
 
 // Get values from lockfile
 async function lockfile() {
-  let lockfile = await fs.promises.readFile(join(installpath + 'lockfile'), 'utf8', (err, data) => {
+  let lockfile = await fs.promises.readFile('.env', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
       return;
     }
-    console.log(data);
     return data;
   });
-  let values = lockfile.split(':').slice(1);
-  return values;
+  let path = lockfile.split('\n')[1].split('=')[1];
+  try {
+    let lockfile = await fs.promises.readFile(join(path + '\\lockfile'), 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log(data);
+      return data;
+    });
+    let values = lockfile.split(':').slice(1);
+    return values;
+  }
+  catch {
+    console.log('lockfile does not exist in specified directory. Is the game open?');
+  }
 }
 // Send values of lockfile to client
 ipcMain.handle('lcuvalues', async () => {
-
   let lcuValues = await lockfile();
   return lcuValues;
 })
@@ -310,10 +334,41 @@ ipcMain.handle('deletepage', async (event, champ, runenum) => {
   });
 });
 
-// Call allchamps
-ipcMain.handle('allchamps', async () => {
-  const all = await allchamps();
+// Call for champroles
+ipcMain.handle('champroles', async () => {
+  const all = await champroles();
   return all
+})
+
+// Call for champions.csv
+ipcMain.handle('allcsv', async () => {
+  const all = await champcsv();
+  return all
+})
+
+ipcMain.handle('selectFolder', async (event, arg) => {
+  let result = await dialog.showOpenDialog(window, {
+    title: 'Choose the LoL installation Folder',
+    buttonLabel: 'Choose Folder',
+    properties: ['openDirectory']
+  })
+  console.log('folder path selected: ', result.filePaths[0])
+  process.env.PATH = result.filePaths[0];
+  console.log(process.env.PATH);
+
+  let newenv = 'KEY='+process.env.KEY+'\n'+'PATH='+process.env.PATH;
+  if (process.env.KEY && process.env.PATH) {
+    await fs.writeFile('.env', newenv, (err, data) => {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log('.env file saved successfully');
+      }
+    })
+  } else {
+    console.log('.env file failed to save');
+  }
+  return result
 })
 
 
@@ -322,33 +377,36 @@ ipcMain.handle('allchamps', async () => {
 socket()
 
 async function socket() {
-  let championroles = await champroles();
-  let test = await allchamps();
-  let champlist = [];
-  //for (i in champroles) {}
+  try {
+    let lcu = await lockfile();
+    let port = lcu[1];
+    let password = lcu[2];
+  } catch (error) {
+    console.log('pulling lockfile values failed')
+  }
 
-  let lcu = await lockfile();
-  let port = lcu[1];
-  let password = lcu[2];
+  // Create websocket & subscribe to events on startup
+  try {
+    const ws = new RiotWSProtocol(`wss://riot:${password}@localhost:${port}/`);
 
-  const ws = new RiotWSProtocol(`wss://riot:${password}@localhost:${port}/`);
-
-  // what happens when websocket opens
-  ws.on('open', () => {
-    console.log('Websocket connected');
-    //.subscribe('OnJsonApiEvent', console.log);
-    // Listen for selected champ
-    ws.subscribe('OnJsonApiEvent_lol-champ-select_v1_current-champion', (currentchamp) => {
-      ;
-      // Find when champion selected, load page & runes
-      if (currentchamp.eventType !== 'Delete') {
-        let id = currentchamp.data;
-        let currentname = championroles[id][0].Name;
-        console.log(currentname);
-        window.loadFile('./src/public/champ_pages/' + currentname + '.html')
-      }
+    ws.on('open', () => {
+      console.log('Websocket connected');
+      //.subscribe('OnJsonApiEvent', console.log);
+      // Listen for selected champ
+      ws.subscribe('OnJsonApiEvent_lol-champ-select_v1_current-champion', (currentchamp) => {
+        ;
+        // Find when champion selected, load page & runes
+        if (currentchamp.eventType !== 'Delete') {
+          let id = currentchamp.data;
+          let currentname = championroles[id][0].Name;
+          console.log(currentname);
+          window.loadFile('./src/public/champ_pages/' + currentname + '.html')
+        }
+      });
     });
-  });
+  } catch {
+    console.log('could not connect to websocket')
+  }
 }
 
 // Defines actions in websocket
@@ -404,46 +462,70 @@ class RiotWSProtocol extends WebSocket {
 
 // Gets champion data by name in ddragon
 async function champdata() {
-  let champdata = await fs.promises.readFile('./data/champion.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    return data;
-  });
-  let values = JSON.parse(champdata);
-  return values;
+  try {
+    let champdata = await fs.promises.readFile('./src/data/champion.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      return data;
+    });
+    let values = JSON.parse(champdata);
+    return values;
+  } catch (error) {
+    console.log('error parsing champion.json')
+  }
+
 }
 
-// Gets champion name by id from json
+// Gets champion name and roles by id
 // Use this website https://www.convertcsv.com/csv-to-json.htm to convert champ csv data to file.
 async function champroles() {
-  let champdata = await fs.promises.readFile('./data/convertcsv.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
+  try {
+    let champdata = await fs.promises.readFile('./src/data/convertcsv.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      return data;
+    });
+    let values = JSON.parse(champdata);
+    let roledata = [];
+    for (let key in values) {
+      roledata[key] = values[key][0];
     }
-    return data;
-  });
-  let values = JSON.parse(champdata);
-  return values;
+    return roledata;
+  } catch (error) {
+    console.log('error parsing convertcsv.json')
+  }
+
 }
 
-async function allchamps() {
-  let data = await fs.promises.readFile('./data/champions.csv', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    return data
-  });
-  let rows = data.split('\n').slice(1);
-  let names = [];
-  rows.forEach(row => {
-    let column = row.split(',');
-    let name = column[1];
-    names.push(name);
-  })
-  names.splice(159)
-  return names;
+async function champcsv() {
+  try {
+    let data = await fs.promises.readFile('./src/data/champions.csv', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      return data
+    });
+    let rows = data.split('\n').slice(1);
+    let ids = [];
+    let names = [];
+    rows.forEach(row => {
+      let column = row.split(',');
+      let champid = column[0];
+      ids.push(champid);
+      let champname = column[1];
+      names.push(champname);
+    })
+    ids.splice(159);
+    names.splice(159);
+    let csv = [ids, names];
+    return csv;
+  } catch (error) {
+    console.log('error parsing champions.csv')
+  }
+
 };

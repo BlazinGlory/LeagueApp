@@ -1,11 +1,13 @@
-.icon {
-  position:relative;
+.tile {
+  position: relative;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 90px;
+  width: 65px;
   user-select: none;
   -webkit-user-select: none;
+  overflow: hidden;
+  white-space: none;
 }
 
 .hidden {
@@ -27,7 +29,8 @@
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: #ccc;
 }
 
@@ -40,19 +43,18 @@
   width: 600px;
 }
 
-nav {
+.rune-container {
+  display: grid;
+  grid-gap: 10px;
+  padding: 5px 5px 5px 5px;
+  height: auto;
   width: auto;
-  height: 32px;
-  color:white;
-  align-items:center;
-  background-color: rgb(29, 0, 136);
-  display: flex;
-  overflow-y:visible;
-  justify-content:space-between;
-  -webkit-app-region: drag;
-  user-select: none;
-  -webkit-user-select: none;
+  max-width: 630px;
+  font-size: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+
 }
+
 
 .nav-p {
   padding: 3px 15px;
@@ -70,32 +72,18 @@ nav {
   color: rgb(29, 0, 136);
 }
 
-.grid-container {
-  display: grid;
-  grid-gap: 10px;
-  padding: 20px;
-  height: auto;
-  width: auto;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-figcaption {
-  color:white;
-  padding: 2px;
-  text-align: center;
-  font-size: 1rem;
-  user-select: none;
-  -webkit-user-select: none;
+.grid-item {
+  top: 0px;
+  margin: 0 auto;
+  
 }
 
 .button {
-  color:white;
-  cursor:pointer;
+  color: white;
+  cursor: pointer;
   padding: 2px;
   text-align: center;
-  margin:auto;
+  margin: auto;
   font-size: 1rem;
   user-select: none;
   -webkit-user-select: none;
@@ -104,10 +92,10 @@ figcaption {
 }
 
 .med {
-  cursor:pointer;
-  display:flex;
+  cursor: pointer;
+  display: flex;
   text-align: center;
-  margin:auto;
+  margin: auto;
   user-select: none;
   -webkit-user-select: none;
   border: none;
@@ -117,25 +105,25 @@ figcaption {
 .runepage {
   width: auto;
   height: auto;
-
+  max-width: 550px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 20px;
 
   display: grid;
 
-  grid-template-columns: 90px 1fr 1fr 1fr 1fr 1fr 90px 1fr 1fr 1fr 1fr;
-  grid-template-rows: 70px 60px 40px 40px 40px 40px 40px 40px;
+  grid-template-columns: 90px 40px 40px 40px 40px 40px 90px 40px 40px 40px 40px;
+  grid-template-rows: 70px 60px 40px 60px 10px 40px 20px 40px;
 
   padding: 10px;
   box-sizing: border-box;
-  
+
 }
 
 .side {
   background-color: black !important;
   margin: -12px 5px !important;
-  margin: 10 10 
+  margin: 10 10
 }
 
 .runepage div {
@@ -155,10 +143,10 @@ figcaption {
 .largeCircle {
   width: 50px;
   height: 50px;
-  position: relative; 
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
-  margin:auto;
+  margin: auto;
   border-radius: 50%;
   display: flex;
   background: #1A2933;
@@ -169,10 +157,10 @@ figcaption {
 .inlargeCircle {
   width: 50px;
   height: 50px;
-  position: relative; 
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
-  margin:auto;
+  margin: auto;
   border-radius: 50%;
   display: flex;
   background: #1A2933;
@@ -184,16 +172,17 @@ figcaption {
   width: 38px;
   margin: auto;
 }
+
 .mediumCircle {
   width: 30px;
   height: 30px;
-  position: relative; 
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
   display: flex;
   background: #1A2933;
-  margin:auto;
+  margin: auto;
   border: 2px solid rgb(187, 255, 255);
   opacity: 0.5;
 }
@@ -201,13 +190,13 @@ figcaption {
 .inmediumCircle {
   width: 30px;
   height: 30px;
-  position: relative; 
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
   display: flex;
   background: #1A2933;
-  margin:auto;
+  margin: auto;
   border: 2px solid rgb(187, 255, 255);
 }
 
@@ -220,13 +209,13 @@ figcaption {
 .smallCircle {
   width: 20px;
   height: 20px;
-  position: relative; 
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
   display: flex;
   background: #1A2933;
-  margin:auto;
+  margin: auto;
   border: 2px solid rgb(187, 255, 255);
   opacity: 0.5;
 }
@@ -234,13 +223,13 @@ figcaption {
 .insmallCircle {
   width: 20px;
   height: 20px;
-  position: relative; 
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
   display: flex;
   background: #1A2933;
-  margin:auto;
+  margin: auto;
   border: 2px solid rgb(187, 255, 255);
 }
 
@@ -277,18 +266,21 @@ figcaption {
   grid-column-start: 2;
   grid-column-end: 2;
 }
+
 .keystone2 {
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 3;
   grid-column-end: 3;
 }
+
 .keystone3 {
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 4;
   grid-column-end: 4;
 }
+
 .keystone4 {
   grid-row-start: 2;
   grid-row-end: 2;
@@ -302,18 +294,21 @@ figcaption {
   grid-column-start: 1;
   grid-column-end: 1;
 }
+
 .sub1_1 {
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 2;
 }
+
 .sub1_2 {
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 3;
   grid-column-end: 3;
 }
+
 .sub1_3 {
   grid-row-start: 4;
   grid-row-end: 4;
@@ -327,18 +322,21 @@ figcaption {
   grid-column-start: 1;
   grid-column-end: 1;
 }
+
 .sub2_1 {
   grid-row-start: 6;
   grid-row-end: 6;
   grid-column-start: 2;
   grid-column-end: 2;
 }
+
 .sub2_2 {
   grid-row-start: 6;
   grid-row-end: 6;
   grid-column-start: 3;
   grid-column-end: 3;
 }
+
 .sub2_3 {
   grid-row-start: 6;
   grid-row-end: 6;
@@ -352,24 +350,28 @@ figcaption {
   grid-column-start: 1;
   grid-column-end: 1;
 }
+
 .sub3_1 {
   grid-row-start: 8;
   grid-row-end: 8;
   grid-column-start: 2;
   grid-column-end: 2;
 }
+
 .sub3_2 {
   grid-row-start: 8;
   grid-row-end: 8;
   grid-column-start: 3;
   grid-column-end: 3;
 }
+
 .sub3_3 {
   grid-row-start: 8;
   grid-row-end: 8;
   grid-column-start: 4;
   grid-column-end: 4;
 }
+
 .sub3_4 {
   grid-row-start: 8;
   grid-row-end: 8;
@@ -384,18 +386,21 @@ figcaption {
   grid-column-start: 7;
   grid-column-end: 7;
 }
+
 .sec1_1 {
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 8;
   grid-column-end: 8;
 }
+
 .sec1_2 {
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 9;
   grid-column-end: 9;
 }
+
 .sec1_3 {
   grid-row-start: 2;
   grid-row-end: 2;
@@ -416,12 +421,14 @@ figcaption {
   grid-column-start: 8;
   grid-column-end: 8;
 }
+
 .sec2_2 {
   grid-row-start: 3;
   grid-row-end: 3;
   grid-column-start: 9;
   grid-column-end: 9;
 }
+
 .sec2_3 {
   grid-row-start: 3;
   grid-row-end: 3;
@@ -435,18 +442,21 @@ figcaption {
   grid-column-start: 8;
   grid-column-end: 8;
 }
+
 .sec3_2 {
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 9;
   grid-column-end: 9;
 }
+
 .sec3_3 {
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 10;
   grid-column-end: 10;
 }
+
 .sec3_4 {
   grid-row-start: 4;
   grid-row-end: 4;
@@ -460,18 +470,21 @@ figcaption {
   grid-column-start: 7;
   grid-column-end: 7;
 }
+
 .stat1_1 {
   grid-row-start: 6;
   grid-row-end: 6;
   grid-column-start: 8;
   grid-column-end: 8;
 }
+
 .stat1_2 {
   grid-row-start: 6;
   grid-row-end: 6;
   grid-column-start: 9;
   grid-column-end: 9;
 }
+
 .stat1_3 {
   grid-row-start: 6;
   grid-row-end: 6;
@@ -486,18 +499,21 @@ figcaption {
   grid-column-start: 7;
   grid-column-end: 7;
 }
+
 .stat2_1 {
   grid-row-start: 7;
   grid-row-end: 7;
   grid-column-start: 8;
   grid-column-end: 8;
 }
+
 .stat2_2 {
   grid-row-start: 7;
   grid-row-end: 7;
   grid-column-start: 9;
   grid-column-end: 9;
 }
+
 .stat2_3 {
   grid-row-start: 7;
   grid-row-end: 7;
@@ -512,18 +528,21 @@ figcaption {
   grid-column-start: 7;
   grid-column-end: 7;
 }
+
 .stat3_1 {
   grid-row-start: 8;
   grid-row-end: 8;
   grid-column-start: 8;
   grid-column-end: 8;
 }
+
 .stat3_2 {
   grid-row-start: 8;
   grid-row-end: 8;
   grid-column-start: 9;
   grid-column-end: 9;
 }
+
 .stat3_3 {
   grid-row-start: 8;
   grid-row-end: 8;

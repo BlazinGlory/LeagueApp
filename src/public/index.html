@@ -14,7 +14,8 @@
 
   <nav>
     <div class="left-nav">
-      <span class="nav-p">Rune App</span>
+      <span class="nav-link" id="sidebtn" onclick="openNav()">&#x2699;</span>
+      <a href="index.html"><span class="nav-link">Rune App</span></a>
     </div>
 
     <div class="right-nav">
@@ -24,656 +25,709 @@
     </div>
   </nav>
 
-  <div id="main">
-    <!--Favorites-->
-    <div class="grid-container">
-
-      <div class="grid-item"><a href="./champ_pages/Shyvana.html"><img src="./champion/Shyvana.png" class="icon">
-          <figcaption>Shyvana</figcaption>
-        </a></div>
-      <div class="grid-item"><a href="./champ_pages/Amumu.html"><img src="./champion/Amumu.png" class="icon">
-          <figcaption>Amumu</figcaption>
-        </a></div>
-      <div class="grid-item grid-item-3"><img src="./champion/Rammus.png" class="icon">
-        <figcaption>Rammus</figcaption>
-      </div>
-      <div class="grid-item grid-item-4"><img src="./champion/Olaf.png" class="icon">
-        <figcaption>Olaf</figcaption>
-      </div>
-      <div class="grid-item grid-item-5"><img src="./champion/Heimerdinger.png" class="icon">
-        <figcaption>Heimerdinger</figcaption>
-      </div>
-      <div class="grid-item grid-item-6"><img src="./champion/AurelionSol.png" class="icon">
-        <figcaption>Aurelion Sol</figcaption>
-      </div>
-      <div class="grid-item grid-item-7"><img src="./champion/Renata.png" class="icon">
-        <figcaption>Renata Glasc</figcaption>
-      </div>
-      <div class="grid-item grid-item-8"><img src="./champion/Cassiopeia.png" class="icon">
-        <figcaption>Cassiopeia</figcaption>
-      </div>
+  <div class="notnav">
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="settings.html">Settings</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
     </div>
 
-
-
-    <div>
-      <input id="name" value="BlazinGloryTv" />
-      <button id="submit">Test API</button>
-      <p>Summoner ID: <span id="sumID">ID</span></p>
-
-      <button id="lcupull">Pull LCU values</button><br><br>
-
-      <div id="searchdiv">
-        <label for="choosechamp">Search Champion:</label><br>
-        <input id="choosechamp" type="text">
-        <button id="searchchamp">Search</button>
-      </div>
-
-      <!--Grid for all champions-->
-      <div class="grid-container" id="allchamps">
-
-        <div class="grid-item" id="Aatrox"><a href="./champ_pages/Aatrox.html"><img src="./champion/Aatrox.png"
-              class="icon">
-            <figcaption>Aatrox</figcaption>
+    <div class="main" id="main">
+      <p>Favorites</p>
+      <!--Favorites-->
+      <div class="grid-container">
+        <div class="grid-item" id="favorites1"><a href="./champ_pages/shyvana.html"><img
+              src="./images/champion/Shyvana.png" class="icon">
+            <figcaption>Shyvana</figcaption>
           </a></div>
-        <div class="grid-item" id="Ahri"><a href="./champ_pages/Ahri.html"><img src="./champion/Ahri.png" class="icon">
-            <figcaption>Ahri</figcaption>
-          </a></div>
-        <div class="grid-item" id="Akali"><a href="./champ_pages/Akali.html"><img src="./champion/Akali.png"
-              class="icon">
-            <figcaption>Akali</figcaption>
-          </a></div>
-        <div class="grid-item" id="Akshan"><a href="./champ_pages/Akshan.html"><img src="./champion/Akshan.png"
-              class="icon">
-            <figcaption>Akshan</figcaption>
-          </a></div>
-        <div class="grid-item" id="Alistar"><a href="./champ_pages/Alistar.html"><img src="./champion/Alistar.png"
-              class="icon">
-            <figcaption>Alistar</figcaption>
-          </a></div>
-        <div class="grid-item" id="Amumu"><a href="./champ_pages/Amumu.html"><img src="./champion/Amumu.png"
+        <div class="grid-item" id="favorites2"><a href="./champ_pages/amumu.html"><img src="./images/champion/Amumu.png"
               class="icon">
             <figcaption>Amumu</figcaption>
           </a></div>
-        <div class="grid-item" id="Anivia"><a href="./champ_pages/Anivia.html"><img src="./champion/Anivia.png"
-              class="icon">
-            <figcaption>Anivia</figcaption>
-          </a></div>
-        <div class="grid-item" id="Annie"><a href="./champ_pages/Annie.html"><img src="./champion/Annie.png"
-              class="icon">
-            <figcaption>Annie</figcaption>
-          </a></div>
-        <div class="grid-item" id="Aphelios"><a href="./champ_pages/Aphelios.html"><img src="./champion/Aphelios.png"
-              class="icon">
-            <figcaption>Aphelios</figcaption>
-          </a></div>
-        <div class="grid-item" id="Ashe"><a href="./champ_pages/Ashe.html"><img src="./champion/Ashe.png" class="icon">
-            <figcaption>Ashe</figcaption>
-          </a></div>
-        <div class="grid-item" id="Aurelion Sol"><a href="./champ_pages/Aurelion Sol.html"><img
-              src="./champion/AurelionSol.png" class="icon">
-            <figcaption>Aurelion Sol</figcaption>
-          </a></div>
-        <div class="grid-item" id="Azir"><a href="./champ_pages/Azir.html"><img src="./champion/Azir.png" class="icon">
-            <figcaption>Azir</figcaption>
-          </a></div>
-        <div class="grid-item" id="Bard"><a href="./champ_pages/Bard.html"><img src="./champion/Bard.png" class="icon">
-            <figcaption>Bard</figcaption>
-          </a></div>
-        <div class="grid-item" id="Blitzcrank"><a href="./champ_pages/Blitzcrank.html"><img
-              src="./champion/Blitzcrank.png" class="icon">
-            <figcaption>Blitzcrank</figcaption>
-          </a></div>
-        <div class="grid-item" id="Brand"><a href="./champ_pages/Brand.html"><img src="./champion/Brand.png"
-              class="icon">
-            <figcaption>Brand</figcaption>
-          </a></div>
-        <div class="grid-item" id="Braum"><a href="./champ_pages/Braum.html"><img src="./champion/Braum.png"
-              class="icon">
-            <figcaption>Braum</figcaption>
-          </a></div>
-        <div class="grid-item" id="Caitlyn"><a href="./champ_pages/Caitlyn.html"><img src="./champion/Caitlyn.png"
-              class="icon">
-            <figcaption>Caitlyn</figcaption>
-          </a></div>
-        <div class="grid-item" id="Camille"><a href="./champ_pages/Camille.html"><img src="./champion/Camille.png"
-              class="icon">
-            <figcaption>Camille</figcaption>
-          </a></div>
-        <div class="grid-item" id="Cassiopeia"><a href="./champ_pages/Cassiopeia.html"><img
-              src="./champion/Cassiopeia.png" class="icon">
-            <figcaption>Cassiopeia</figcaption>
-          </a></div>
-        <div class="grid-item" id="Cho'Gath"><a href="./champ_pages/Cho'Gath.html"><img src="./champion/Chogath.png"
-              class="icon">
-            <figcaption>Cho'Gath</figcaption>
-          </a></div>
-        <div class="grid-item" id="Corki"><a href="./champ_pages/Corki.html"><img src="./champion/Corki.png"
-              class="icon">
-            <figcaption>Corki</figcaption>
-          </a></div>
-        <div class="grid-item" id="Darius"><a href="./champ_pages/Darius.html"><img src="./champion/Darius.png"
-              class="icon">
-            <figcaption>Darius</figcaption>
-          </a></div>
-        <div class="grid-item" id="Diana"><a href="./champ_pages/Diana.html"><img src="./champion/Diana.png"
-              class="icon">
-            <figcaption>Diana</figcaption>
-          </a></div>
-        <div class="grid-item" id="Dr. Mundo"><a href="./champ_pages/Dr. Mundo.html"><img src="./champion/DrMundo.png"
-              class="icon">
-            <figcaption>Dr. Mundo</figcaption>
-          </a></div>
-        <div class="grid-item" id="Draven"><a href="./champ_pages/Draven.html"><img src="./champion/Draven.png"
-              class="icon">
-            <figcaption>Draven</figcaption>
-          </a></div>
-        <div class="grid-item" id="Ekko"><a href="./champ_pages/Ekko.html"><img src="./champion/Ekko.png" class="icon">
-            <figcaption>Ekko</figcaption>
-          </a></div>
-        <div class="grid-item" id="Elise"><a href="./champ_pages/Elise.html"><img src="./champion/Elise.png"
-              class="icon">
-            <figcaption>Elise</figcaption>
-          </a></div>
-        <div class="grid-item" id="Evelynn"><a href="./champ_pages/Evelynn.html"><img src="./champion/Evelynn.png"
-              class="icon">
-            <figcaption>Evelynn</figcaption>
-          </a></div>
-        <div class="grid-item" id="Ezreal"><a href="./champ_pages/Ezreal.html"><img src="./champion/Ezreal.png"
-              class="icon">
-            <figcaption>Ezreal</figcaption>
-          </a></div>
-        <div class="grid-item" id="Fiddlesticks"><a href="./champ_pages/Fiddlesticks.html"><img
-              src="./champion/Fiddlesticks.png" class="icon">
-            <figcaption>Fiddlesticks</figcaption>
-          </a></div>
-        <div class="grid-item" id="Fiora"><a href="./champ_pages/Fiora.html"><img src="./champion/Fiora.png"
-              class="icon">
-            <figcaption>Fiora</figcaption>
-          </a></div>
-        <div class="grid-item" id="Fizz"><a href="./champ_pages/Fizz.html"><img src="./champion/Fizz.png" class="icon">
-            <figcaption>Fizz</figcaption>
-          </a></div>
-        <div class="grid-item" id="Galio"><a href="./champ_pages/Galio.html"><img src="./champion/Galio.png"
-              class="icon">
-            <figcaption>Galio</figcaption>
-          </a></div>
-        <div class="grid-item" id="Gangplank"><a href="./champ_pages/Gangplank.html"><img src="./champion/Gangplank.png"
-              class="icon">
-            <figcaption>Gangplank</figcaption>
-          </a></div>
-        <div class="grid-item" id="Garen"><a href="./champ_pages/Garen.html"><img src="./champion/Garen.png"
-              class="icon">
-            <figcaption>Garen</figcaption>
-          </a></div>
-        <div class="grid-item" id="Gnar"><a href="./champ_pages/Gnar.html"><img src="./champion/Gnar.png" class="icon">
-            <figcaption>Gnar</figcaption>
-          </a></div>
-        <div class="grid-item" id="Gragas"><a href="./champ_pages/Gragas.html"><img src="./champion/Gragas.png"
-              class="icon">
-            <figcaption>Gragas</figcaption>
-          </a></div>
-        <div class="grid-item" id="Graves"><a href="./champ_pages/Graves.html"><img src="./champion/Graves.png"
-              class="icon">
-            <figcaption>Graves</figcaption>
-          </a></div>
-        <div class="grid-item" id="Gwen"><a href="./champ_pages/Gwen.html"><img src="./champion/Gwen.png" class="icon">
-            <figcaption>Gwen</figcaption>
-          </a></div>
-        <div class="grid-item" id="Hecarim"><a href="./champ_pages/Hecarim.html"><img src="./champion/Hecarim.png"
-              class="icon">
-            <figcaption>Hecarim</figcaption>
-          </a></div>
-        <div class="grid-item" id="Heimerdinger"><a href="./champ_pages/Heimerdinger.html"><img
-              src="./champion/Heimerdinger.png" class="icon">
-            <figcaption>Heimerdinger</figcaption>
-          </a></div>
-        <div class="grid-item" id="Illaoi"><a href="./champ_pages/Illaoi.html"><img src="./champion/Illaoi.png"
-              class="icon">
-            <figcaption>Illaoi</figcaption>
-          </a></div>
-        <div class="grid-item" id="Irelia"><a href="./champ_pages/Irelia.html"><img src="./champion/Irelia.png"
-              class="icon">
-            <figcaption>Irelia</figcaption>
-          </a></div>
-        <div class="grid-item" id="Ivern"><a href="./champ_pages/Ivern.html"><img src="./champion/Ivern.png"
-              class="icon">
-            <figcaption>Ivern</figcaption>
-          </a></div>
-        <div class="grid-item" id="Janna"><a href="./champ_pages/Janna.html"><img src="./champion/Janna.png"
-              class="icon">
-            <figcaption>Janna</figcaption>
-          </a></div>
-        <div class="grid-item" id="Jarvan IV"><a href="./champ_pages/Jarvan IV.html"><img src="./champion/JarvanIV.png"
-              class="icon">
-            <figcaption>Jarvan IV</figcaption>
-          </a></div>
-        <div class="grid-item" id="Jax"><a href="./champ_pages/Jax.html"><img src="./champion/Jax.png" class="icon">
-            <figcaption>Jax</figcaption>
-          </a></div>
-        <div class="grid-item" id="Jayce"><a href="./champ_pages/Jayce.html"><img src="./champion/Jayce.png"
-              class="icon">
-            <figcaption>Jayce</figcaption>
-          </a></div>
-        <div class="grid-item" id="Jhin"><a href="./champ_pages/Jhin.html"><img src="./champion/Jhin.png" class="icon">
-            <figcaption>Jhin</figcaption>
-          </a></div>
-        <div class="grid-item" id="Jinx"><a href="./champ_pages/Jinx.html"><img src="./champion/Jinx.png" class="icon">
-            <figcaption>Jinx</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kai'Sa"><a href="./champ_pages/Kai'Sa.html"><img src="./champion/Kaisa.png"
-              class="icon">
-            <figcaption>Kai'Sa</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kalista"><a href="./champ_pages/Kalista.html"><img src="./champion/Kalista.png"
-              class="icon">
-            <figcaption>Kalista</figcaption>
-          </a></div>
-        <div class="grid-item" id="Karma"><a href="./champ_pages/Karma.html"><img src="./champion/Karma.png"
-              class="icon">
-            <figcaption>Karma</figcaption>
-          </a></div>
-        <div class="grid-item" id="Karthus"><a href="./champ_pages/Karthus.html"><img src="./champion/Karthus.png"
-              class="icon">
-            <figcaption>Karthus</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kassadin"><a href="./champ_pages/Kassadin.html"><img src="./champion/Kassadin.png"
-              class="icon">
-            <figcaption>Kassadin</figcaption>
-          </a></div>
-        <div class="grid-item" id="Katarina"><a href="./champ_pages/Katarina.html"><img src="./champion/Katarina.png"
-              class="icon">
-            <figcaption>Katarina</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kayle"><a href="./champ_pages/Kayle.html"><img src="./champion/Kayle.png"
-              class="icon">
-            <figcaption>Kayle</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kayn"><a href="./champ_pages/Kayn.html"><img src="./champion/Kayn.png" class="icon">
-            <figcaption>Kayn</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kennen"><a href="./champ_pages/Kennen.html"><img src="./champion/Kennen.png"
-              class="icon">
-            <figcaption>Kennen</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kha'Zix"><a href="./champ_pages/Kha'Zix.html"><img src="./champion/Khazix.png"
-              class="icon">
-            <figcaption>Kha'Zix</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kindred"><a href="./champ_pages/Kindred.html"><img src="./champion/Kindred.png"
-              class="icon">
-            <figcaption>Kindred</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kled"><a href="./champ_pages/Kled.html"><img src="./champion/Kled.png" class="icon">
-            <figcaption>Kled</figcaption>
-          </a></div>
-        <div class="grid-item" id="Kog'Maw"><a href="./champ_pages/Kog'Maw.html"><img src="./champion/KogMaw.png"
-              class="icon">
-            <figcaption>Kog'Maw</figcaption>
-          </a></div>
-        <div class="grid-item" id="LeBlanc"><a href="./champ_pages/LeBlanc.html"><img src="./champion/Leblanc.png"
-              class="icon">
-            <figcaption>LeBlanc</figcaption>
-          </a></div>
-        <div class="grid-item" id="Lee Sin"><a href="./champ_pages/Lee Sin.html"><img src="./champion/LeeSin.png"
-              class="icon">
-            <figcaption>Lee Sin</figcaption>
-          </a></div>
-        <div class="grid-item" id="Leona"><a href="./champ_pages/Leona.html"><img src="./champion/Leona.png"
-              class="icon">
-            <figcaption>Leona</figcaption>
-          </a></div>
-        <div class="grid-item" id="Lillia"><a href="./champ_pages/Lillia.html"><img src="./champion/Lillia.png"
-              class="icon">
-            <figcaption>Lillia</figcaption>
-          </a></div>
-        <div class="grid-item" id="Lissandra"><a href="./champ_pages/Lissandra.html"><img src="./champion/Lissandra.png"
-              class="icon">
-            <figcaption>Lissandra</figcaption>
-          </a></div>
-        <div class="grid-item" id="Lucian"><a href="./champ_pages/Lucian.html"><img src="./champion/Lucian.png"
-              class="icon">
-            <figcaption>Lucian</figcaption>
-          </a></div>
-        <div class="grid-item" id="Lulu"><a href="./champ_pages/Lulu.html"><img src="./champion/Lulu.png" class="icon">
-            <figcaption>Lulu</figcaption>
-          </a></div>
-        <div class="grid-item" id="Lux"><a href="./champ_pages/Lux.html"><img src="./champion/Lux.png" class="icon">
-            <figcaption>Lux</figcaption>
-          </a></div>
-        <div class="grid-item" id="Malphite"><a href="./champ_pages/Malphite.html"><img src="./champion/Malphite.png"
-              class="icon">
-            <figcaption>Malphite</figcaption>
-          </a></div>
-        <div class="grid-item" id="Malzahar"><a href="./champ_pages/Malzahar.html"><img src="./champion/Malzahar.png"
-              class="icon">
-            <figcaption>Malzahar</figcaption>
-          </a></div>
-        <div class="grid-item" id="Maokai"><a href="./champ_pages/Maokai.html"><img src="./champion/Maokai.png"
-              class="icon">
-            <figcaption>Maokai</figcaption>
-          </a></div>
-        <div class="grid-item" id="Master Yi"><a href="./champ_pages/Master Yi.html"><img src="./champion/MasterYi.png"
-              class="icon">
-            <figcaption>Master Yi</figcaption>
-          </a></div>
-        <div class="grid-item" id="Miss Fortune"><a href="./champ_pages/Miss Fortune.html"><img
-              src="./champion/MissFortune.png" class="icon">
-            <figcaption>Miss Fortune</figcaption>
-          </a></div>
-        <div class="grid-item" id="Mordekaiser"><a href="./champ_pages/Mordekaiser.html"><img
-              src="./champion/Mordekaiser.png" class="icon">
-            <figcaption>Mordekaiser</figcaption>
-          </a></div>
-        <div class="grid-item" id="Morgana"><a href="./champ_pages/Morgana.html"><img src="./champion/Morgana.png"
-              class="icon">
-            <figcaption>Morgana</figcaption>
-          </a></div>
-        <div class="grid-item" id="Nami"><a href="./champ_pages/Nami.html"><img src="./champion/Nami.png" class="icon">
-            <figcaption>Nami</figcaption>
-          </a></div>
-        <div class="grid-item" id="Nasus"><a href="./champ_pages/Nasus.html"><img src="./champion/Nasus.png"
-              class="icon">
-            <figcaption>Nasus</figcaption>
-          </a></div>
-        <div class="grid-item" id="Nautilus"><a href="./champ_pages/Nautilus.html"><img src="./champion/Nautilus.png"
-              class="icon">
-            <figcaption>Nautilus</figcaption>
-          </a></div>
-        <div class="grid-item" id="Neeko"><a href="./champ_pages/Neeko.html"><img src="./champion/Neeko.png"
-              class="icon">
-            <figcaption>Neeko</figcaption>
-          </a></div>
-        <div class="grid-item" id="Nidalee"><a href="./champ_pages/Nidalee.html"><img src="./champion/Nidalee.png"
-              class="icon">
-            <figcaption>Nidalee</figcaption>
-          </a></div>
-        <div class="grid-item" id="Nocturne"><a href="./champ_pages/Nocturne.html"><img src="./champion/Nocturne.png"
-              class="icon">
-            <figcaption>Nocturne</figcaption>
-          </a></div>
-        <div class="grid-item" id="Nunu and Willump"><a href="./champ_pages/Nunu and Willump.html"><img
-              src="./champion/Nunu.png" class="icon">
-            <figcaption>Nunu and Willump</figcaption>
-          </a></div>
-        <div class="grid-item" id="Olaf"><a href="./champ_pages/Olaf.html"><img src="./champion/Olaf.png" class="icon">
-            <figcaption>Olaf</figcaption>
-          </a></div>
-        <div class="grid-item" id="Orianna"><a href="./champ_pages/Orianna.html"><img src="./champion/Orianna.png"
-              class="icon">
-            <figcaption>Orianna</figcaption>
-          </a></div>
-        <div class="grid-item" id="Ornn"><a href="./champ_pages/Ornn.html"><img src="./champion/Ornn.png" class="icon">
-            <figcaption>Ornn</figcaption>
-          </a></div>
-        <div class="grid-item" id="Pantheon"><a href="./champ_pages/Pantheon.html"><img src="./champion/Pantheon.png"
-              class="icon">
-            <figcaption>Pantheon</figcaption>
-          </a></div>
-        <div class="grid-item" id="Poppy"><a href="./champ_pages/Poppy.html"><img src="./champion/Poppy.png"
-              class="icon">
-            <figcaption>Poppy</figcaption>
-          </a></div>
-        <div class="grid-item" id="Pyke"><a href="./champ_pages/Pyke.html"><img src="./champion/Pyke.png" class="icon">
-            <figcaption>Pyke</figcaption>
-          </a></div>
-        <div class="grid-item" id="Qiyana"><a href="./champ_pages/Qiyana.html"><img src="./champion/Qiyana.png"
-              class="icon">
-            <figcaption>Qiyana</figcaption>
-          </a></div>
-        <div class="grid-item" id="Quinn"><a href="./champ_pages/Quinn.html"><img src="./champion/Quinn.png"
-              class="icon">
-            <figcaption>Quinn</figcaption>
-          </a></div>
-        <div class="grid-item" id="Rakan"><a href="./champ_pages/Rakan.html"><img src="./champion/Rakan.png"
-              class="icon">
-            <figcaption>Rakan</figcaption>
-          </a></div>
-        <div class="grid-item" id="Rammus"><a href="./champ_pages/Rammus.html"><img src="./champion/Rammus.png"
-              class="icon">
-            <figcaption>Rammus</figcaption>
-          </a></div>
-        <div class="grid-item" id="Rek'Sai"><a href="./champ_pages/Rek'Sai.html"><img src="./champion/RekSai.png"
-              class="icon">
-            <figcaption>Rek'Sai</figcaption>
-          </a></div>
-        <div class="grid-item" id="Rell"><a href="./champ_pages/Rell.html"><img src="./champion/Rell.png" class="icon">
-            <figcaption>Rell</figcaption>
-          </a></div>
-        <div class="grid-item" id="Renata Glasc"><a href="./champ_pages/Renata Glasc.html"><img
-              src="./champion/Renata.png" class="icon">
-            <figcaption>Renata Glasc</figcaption>
-          </a></div>
-        <div class="grid-item" id="Renekton"><a href="./champ_pages/Renekton.html"><img src="./champion/Renekton.png"
-              class="icon">
-            <figcaption>Renekton</figcaption>
-          </a></div>
-        <div class="grid-item" id="Rengar"><a href="./champ_pages/Rengar.html"><img src="./champion/Rengar.png"
-              class="icon">
-            <figcaption>Rengar</figcaption>
-          </a></div>
-        <div class="grid-item" id="Riven"><a href="./champ_pages/Riven.html"><img src="./champion/Riven.png"
-              class="icon">
-            <figcaption>Riven</figcaption>
-          </a></div>
-        <div class="grid-item" id="Rumble"><a href="./champ_pages/Rumble.html"><img src="./champion/Rumble.png"
-              class="icon">
-            <figcaption>Rumble</figcaption>
-          </a></div>
-        <div class="grid-item" id="Ryze"><a href="./champ_pages/Ryze.html"><img src="./champion/Ryze.png" class="icon">
-            <figcaption>Ryze</figcaption>
-          </a></div>
-        <div class="grid-item" id="Samira"><a href="./champ_pages/Samira.html"><img src="./champion/Samira.png"
-              class="icon">
-            <figcaption>Samira</figcaption>
-          </a></div>
-        <div class="grid-item" id="Sejuani"><a href="./champ_pages/Sejuani.html"><img src="./champion/Sejuani.png"
-              class="icon">
-            <figcaption>Sejuani</figcaption>
-          </a></div>
-        <div class="grid-item" id="Senna"><a href="./champ_pages/Senna.html"><img src="./champion/Senna.png"
-              class="icon">
-            <figcaption>Senna</figcaption>
-          </a></div>
-        <div class="grid-item" id="Seraphine"><a href="./champ_pages/Seraphine.html"><img src="./champion/Seraphine.png"
-              class="icon">
-            <figcaption>Seraphine</figcaption>
-          </a></div>
-        <div class="grid-item" id="Sett"><a href="./champ_pages/Sett.html"><img src="./champion/Sett.png" class="icon">
-            <figcaption>Sett</figcaption>
-          </a></div>
-        <div class="grid-item" id="Shaco"><a href="./champ_pages/Shaco.html"><img src="./champion/Shaco.png"
-              class="icon">
-            <figcaption>Shaco</figcaption>
-          </a></div>
-        <div class="grid-item" id="Shen"><a href="./champ_pages/Shen.html"><img src="./champion/Shen.png" class="icon">
-            <figcaption>Shen</figcaption>
-          </a></div>
-        <div class="grid-item" id="Shyvana"><a href="./champ_pages/Shyvana.html"><img src="./champion/Shyvana.png"
-              class="icon">
-            <figcaption>Shyvana</figcaption>
-          </a></div>
-        <div class="grid-item" id="Singed"><a href="./champ_pages/Singed.html"><img src="./champion/Singed.png"
-              class="icon">
-            <figcaption>Singed</figcaption>
-          </a></div>
-        <div class="grid-item" id="Sion"><a href="./champ_pages/Sion.html"><img src="./champion/Sion.png" class="icon">
-            <figcaption>Sion</figcaption>
-          </a></div>
-        <div class="grid-item" id="Sivir"><a href="./champ_pages/Sivir.html"><img src="./champion/Sivir.png"
-              class="icon">
-            <figcaption>Sivir</figcaption>
-          </a></div>
-        <div class="grid-item" id="Skarner"><a href="./champ_pages/Skarner.html"><img src="./champion/Skarner.png"
-              class="icon">
-            <figcaption>Skarner</figcaption>
-          </a></div>
-        <div class="grid-item" id="Sona"><a href="./champ_pages/Sona.html"><img src="./champion/Sona.png" class="icon">
-            <figcaption>Sona</figcaption>
-          </a></div>
-        <div class="grid-item" id="Soraka"><a href="./champ_pages/Soraka.html"><img src="./champion/Soraka.png"
-              class="icon">
-            <figcaption>Soraka</figcaption>
-          </a></div>
-        <div class="grid-item" id="Swain"><a href="./champ_pages/Swain.html"><img src="./champion/Swain.png"
-              class="icon">
-            <figcaption>Swain</figcaption>
-          </a></div>
-        <div class="grid-item" id="Sylas"><a href="./champ_pages/Sylas.html"><img src="./champion/Sylas.png"
-              class="icon">
-            <figcaption>Sylas</figcaption>
-          </a></div>
-        <div class="grid-item" id="Syndra"><a href="./champ_pages/Syndra.html"><img src="./champion/Syndra.png"
-              class="icon">
-            <figcaption>Syndra</figcaption>
-          </a></div>
-        <div class="grid-item" id="Tahm Kench"><a href="./champ_pages/Tahm Kench.html"><img
-              src="./champion/TahmKench.png" class="icon">
-            <figcaption>Tahm Kench</figcaption>
-          </a></div>
-        <div class="grid-item" id="Taliyah"><a href="./champ_pages/Taliyah.html"><img src="./champion/Taliyah.png"
-              class="icon">
-            <figcaption>Taliyah</figcaption>
-          </a></div>
-        <div class="grid-item" id="Talon"><a href="./champ_pages/Talon.html"><img src="./champion/Talon.png"
-              class="icon">
-            <figcaption>Talon</figcaption>
-          </a></div>
-        <div class="grid-item" id="Taric"><a href="./champ_pages/Taric.html"><img src="./champion/Taric.png"
-              class="icon">
-            <figcaption>Taric</figcaption>
-          </a></div>
-        <div class="grid-item" id="Teemo"><a href="./champ_pages/Teemo.html"><img src="./champion/Teemo.png"
-              class="icon">
-            <figcaption>Teemo</figcaption>
-          </a></div>
-        <div class="grid-item" id="Thresh"><a href="./champ_pages/Thresh.html"><img src="./champion/Thresh.png"
-              class="icon">
-            <figcaption>Thresh</figcaption>
-          </a></div>
-        <div class="grid-item" id="Tristana"><a href="./champ_pages/Tristana.html"><img src="./champion/Tristana.png"
-              class="icon">
-            <figcaption>Tristana</figcaption>
-          </a></div>
-        <div class="grid-item" id="Trundle"><a href="./champ_pages/Trundle.html"><img src="./champion/Trundle.png"
-              class="icon">
-            <figcaption>Trundle</figcaption>
-          </a></div>
-        <div class="grid-item" id="Tryndamere"><a href="./champ_pages/Tryndamere.html"><img
-              src="./champion/Tryndamere.png" class="icon">
-            <figcaption>Tryndamere</figcaption>
-          </a></div>
-        <div class="grid-item" id="Twisted Fate"><a href="./champ_pages/Twisted Fate.html"><img
-              src="./champion/TwistedFate.png" class="icon">
-            <figcaption>Twisted Fate</figcaption>
-          </a></div>
-        <div class="grid-item" id="Twitch"><a href="./champ_pages/Twitch.html"><img src="./champion/Twitch.png"
-              class="icon">
-            <figcaption>Twitch</figcaption>
-          </a></div>
-        <div class="grid-item" id="Udyr"><a href="./champ_pages/Udyr.html"><img src="./champion/Udyr.png" class="icon">
-            <figcaption>Udyr</figcaption>
-          </a></div>
-        <div class="grid-item" id="Urgot"><a href="./champ_pages/Urgot.html"><img src="./champion/Urgot.png"
-              class="icon">
-            <figcaption>Urgot</figcaption>
-          </a></div>
-        <div class="grid-item" id="Varus"><a href="./champ_pages/Varus.html"><img src="./champion/Varus.png"
-              class="icon">
-            <figcaption>Varus</figcaption>
-          </a></div>
-        <div class="grid-item" id="Vayne"><a href="./champ_pages/Vayne.html"><img src="./champion/Vayne.png"
-              class="icon">
-            <figcaption>Vayne</figcaption>
-          </a></div>
-        <div class="grid-item" id="Veigar"><a href="./champ_pages/Veigar.html"><img src="./champion/Veigar.png"
-              class="icon">
-            <figcaption>Veigar</figcaption>
-          </a></div>
-        <div class="grid-item" id="Vel'Koz"><a href="./champ_pages/Vel'Koz.html"><img src="./champion/Velkoz.png"
-              class="icon">
-            <figcaption>Vel'Koz</figcaption>
-          </a></div>
-        <div class="grid-item" id="Vex"><a href="./champ_pages/Vex.html"><img src="./champion/Vex.png" class="icon">
-            <figcaption>Vex</figcaption>
-          </a></div>
-        <div class="grid-item" id="Vi"><a href="./champ_pages/Vi.html"><img src="./champion/Vi.png" class="icon">
-            <figcaption>Vi</figcaption>
-          </a></div>
-        <div class="grid-item" id="Viego"><a href="./champ_pages/Viego.html"><img src="./champion/Viego.png"
-              class="icon">
-            <figcaption>Viego</figcaption>
-          </a></div>
-        <div class="grid-item" id="Viktor"><a href="./champ_pages/Viktor.html"><img src="./champion/Viktor.png"
-              class="icon">
-            <figcaption>Viktor</figcaption>
-          </a></div>
-        <div class="grid-item" id="Vladimir"><a href="./champ_pages/Vladimir.html"><img src="./champion/Vladimir.png"
-              class="icon">
-            <figcaption>Vladimir</figcaption>
-          </a></div>
-        <div class="grid-item" id="Volibear"><a href="./champ_pages/Volibear.html"><img src="./champion/Volibear.png"
-              class="icon">
-            <figcaption>Volibear</figcaption>
-          </a></div>
-        <div class="grid-item" id="Warwick"><a href="./champ_pages/Warwick.html"><img src="./champion/Warwick.png"
-              class="icon">
-            <figcaption>Warwick</figcaption>
-          </a></div>
-        <div class="grid-item" id="Wukong"><a href="./champ_pages/Wukong.html"><img src="./champion/MonkeyKing.png"
-              class="icon">
-            <figcaption>Wukong</figcaption>
-          </a></div>
-        <div class="grid-item" id="Xayah"><a href="./champ_pages/Xayah.html"><img src="./champion/Xayah.png"
-              class="icon">
-            <figcaption>Xayah</figcaption>
-          </a></div>
-        <div class="grid-item" id="Xerath"><a href="./champ_pages/Xerath.html"><img src="./champion/Xerath.png"
-              class="icon">
-            <figcaption>Xerath</figcaption>
-          </a></div>
-        <div class="grid-item" id="Xin Zhao"><a href="./champ_pages/Xin Zhao.html"><img src="./champion/XinZhao.png"
-              class="icon">
-            <figcaption>Xin Zhao</figcaption>
-          </a></div>
-        <div class="grid-item" id="Yasuo"><a href="./champ_pages/Yasuo.html"><img src="./champion/Yasuo.png"
-              class="icon">
-            <figcaption>Yasuo</figcaption>
-          </a></div>
-        <div class="grid-item" id="Yone"><a href="./champ_pages/Yone.html"><img src="./champion/Yone.png" class="icon">
-            <figcaption>Yone</figcaption>
-          </a></div>
-        <div class="grid-item" id="Yorick"><a href="./champ_pages/Yorick.html"><img src="./champion/Yorick.png"
-              class="icon">
-            <figcaption>Yorick</figcaption>
-          </a></div>
-        <div class="grid-item" id="Yuumi"><a href="./champ_pages/Yuumi.html"><img src="./champion/Yuumi.png"
-              class="icon">
-            <figcaption>Yuumi</figcaption>
-          </a></div>
-        <div class="grid-item" id="Zac"><a href="./champ_pages/Zac.html"><img src="./champion/Zac.png" class="icon">
-            <figcaption>Zac</figcaption>
-          </a></div>
-        <div class="grid-item" id="Zed"><a href="./champ_pages/Zed.html"><img src="./champion/Zed.png" class="icon">
-            <figcaption>Zed</figcaption>
-          </a></div>
-        <div class="grid-item" id="Zeri"><a href="./champ_pages/Zeri.html"><img src="./champion/Zeri.png" class="icon">
-            <figcaption>Zeri</figcaption>
-          </a></div>
-        <div class="grid-item" id="Ziggs"><a href="./champ_pages/Ziggs.html"><img src="./champion/Ziggs.png"
-              class="icon">
-            <figcaption>Ziggs</figcaption>
-          </a></div>
-        <div class="grid-item" id="Zilean"><a href="./champ_pages/Zilean.html"><img src="./champion/Zilean.png"
-              class="icon">
-            <figcaption>Zilean</figcaption>
-          </a></div>
-        <div class="grid-item" id="Zoe"><a href="./champ_pages/Zoe.html"><img src="./champion/Zoe.png" class="icon">
-            <figcaption>Zoe</figcaption>
-          </a></div>
-        <div class="grid-item" id="Zyra"><a href="./champ_pages/Zyra.html"><img src="./champion/Zyra.png" class="icon">
-            <figcaption>Zyra</figcaption>
-          </a></div>
+        <div class="grid-item" id="favorites3"><img src="./images/champion/Rammus.png" class="icon">
+          <figcaption>Rammus</figcaption>
+        </div>
+        <div class="grid-item" id="favorites4"><img src="./images/champion/Olaf.png" class="icon">
+          <figcaption>Olaf</figcaption>
+        </div>
+        <div class="grid-item" id="favorites5"><img src="./images/champion/Nunu.png" class="icon">
+          <figcaption>Nunu and Willump</figcaption>
+        </div>
+      </div>
+
+      <div>
+        <input id="name" value="BlazinGloryTv" />
+        <button id="submit">Test API</button>
+        <p>Summoner ID: <span id="sumID">ID</span></p>
+
+        <button id="lcupull">Pull LCU values</button><br><br>
+
+        <button id="directory">Choose Folder</button>
+        <br><br>
+
+        <div id="rolefilter">
+          <button class="filterbtn" id="all" onclick="setfilter('All')">All</button>
+          <button class="filterbtn" id="top" onclick="setfilter('Top')" id="top">Top</button>
+          <button class="filterbtn" id="jg" onclick="setfilter('Jg')" id="jg">Jg</button>
+          <button class="filterbtn" id="mid" onclick="setfilter('Mid')">Mid</button>
+          <button class="filterbtn" id="ad" onclick="setfilter('Ad')">ADC</button>
+          <button class="filterbtn" id="sup" onclick="setfilter('Sup')">Sup</button>
+          <span id="rolefilter" value="All" hidden></span>
+        </div>
+        <br>
+        <div id="searchdiv">
+          <label for="choosechamp">Search Champion:</label><br>
+          <input id="choosechamp" type="text">
+          <button id="searchchamp">Search</button>
+        </div>
+
+        <!--Grid for all champions-->
+        <div class="grid-container" id="allchamps">
+          <div class="grid-item" id="Aatrox"><a href="./champ_pages/Aatrox.html"><img src="./images/champion/Aatrox.png"
+                class="icon">
+              <figcaption>Aatrox</figcaption>
+            </a></div>
+          <div class="grid-item" id="Ahri"><a href="./champ_pages/Ahri.html"><img src="./images/champion/Ahri.png"
+                class="icon">
+              <figcaption>Ahri</figcaption>
+            </a></div>
+          <div class="grid-item" id="Akali"><a href="./champ_pages/Akali.html"><img src="./images/champion/Akali.png"
+                class="icon">
+              <figcaption>Akali</figcaption>
+            </a></div>
+          <div class="grid-item" id="Akshan"><a href="./champ_pages/Akshan.html"><img src="./images/champion/Akshan.png"
+                class="icon">
+              <figcaption>Akshan</figcaption>
+            </a></div>
+          <div class="grid-item" id="Alistar"><a href="./champ_pages/Alistar.html"><img
+                src="./images/champion/Alistar.png" class="icon">
+              <figcaption>Alistar</figcaption>
+            </a></div>
+          <div class="grid-item" id="Amumu"><a href="./champ_pages/Amumu.html"><img src="./images/champion/Amumu.png"
+                class="icon">
+              <figcaption>Amumu</figcaption>
+            </a></div>
+          <div class="grid-item" id="Anivia"><a href="./champ_pages/Anivia.html"><img src="./images/champion/Anivia.png"
+                class="icon">
+              <figcaption>Anivia</figcaption>
+            </a></div>
+          <div class="grid-item" id="Annie"><a href="./champ_pages/Annie.html"><img src="./images/champion/Annie.png"
+                class="icon">
+              <figcaption>Annie</figcaption>
+            </a></div>
+          <div class="grid-item" id="Aphelios"><a href="./champ_pages/Aphelios.html"><img
+                src="./images/champion/Aphelios.png" class="icon">
+              <figcaption>Aphelios</figcaption>
+            </a></div>
+          <div class="grid-item" id="Ashe"><a href="./champ_pages/Ashe.html"><img src="./images/champion/Ashe.png"
+                class="icon">
+              <figcaption>Ashe</figcaption>
+            </a></div>
+          <div class="grid-item" id="Aurelion Sol"><a href="./champ_pages/Aurelion Sol.html"><img
+                src="./images/champion/AurelionSol.png" class="icon">
+              <figcaption>Aurelion Sol</figcaption>
+            </a></div>
+          <div class="grid-item" id="Azir"><a href="./champ_pages/Azir.html"><img src="./images/champion/Azir.png"
+                class="icon">
+              <figcaption>Azir</figcaption>
+            </a></div>
+          <div class="grid-item" id="Bard"><a href="./champ_pages/Bard.html"><img src="./images/champion/Bard.png"
+                class="icon">
+              <figcaption>Bard</figcaption>
+            </a></div>
+          <div class="grid-item" id="Blitzcrank"><a href="./champ_pages/Blitzcrank.html"><img
+                src="./images/champion/Blitzcrank.png" class="icon">
+              <figcaption>Blitzcrank</figcaption>
+            </a></div>
+          <div class="grid-item" id="Brand"><a href="./champ_pages/Brand.html"><img src="./images/champion/Brand.png"
+                class="icon">
+              <figcaption>Brand</figcaption>
+            </a></div>
+          <div class="grid-item" id="Braum"><a href="./champ_pages/Braum.html"><img src="./images/champion/Braum.png"
+                class="icon">
+              <figcaption>Braum</figcaption>
+            </a></div>
+          <div class="grid-item" id="Caitlyn"><a href="./champ_pages/Caitlyn.html"><img
+                src="./images/champion/Caitlyn.png" class="icon">
+              <figcaption>Caitlyn</figcaption>
+            </a></div>
+          <div class="grid-item" id="Camille"><a href="./champ_pages/Camille.html"><img
+                src="./images/champion/Camille.png" class="icon">
+              <figcaption>Camille</figcaption>
+            </a></div>
+          <div class="grid-item" id="Cassiopeia"><a href="./champ_pages/Cassiopeia.html"><img
+                src="./images/champion/Cassiopeia.png" class="icon">
+              <figcaption>Cassiopeia</figcaption>
+            </a></div>
+          <div class="grid-item" id="Cho'Gath"><a href="./champ_pages/Cho'Gath.html"><img
+                src="./images/champion/Chogath.png" class="icon">
+              <figcaption>Cho'Gath</figcaption>
+            </a></div>
+          <div class="grid-item" id="Corki"><a href="./champ_pages/Corki.html"><img src="./images/champion/Corki.png"
+                class="icon">
+              <figcaption>Corki</figcaption>
+            </a></div>
+          <div class="grid-item" id="Darius"><a href="./champ_pages/Darius.html"><img src="./images/champion/Darius.png"
+                class="icon">
+              <figcaption>Darius</figcaption>
+            </a></div>
+          <div class="grid-item" id="Diana"><a href="./champ_pages/Diana.html"><img src="./images/champion/Diana.png"
+                class="icon">
+              <figcaption>Diana</figcaption>
+            </a></div>
+          <div class="grid-item" id="Dr. Mundo"><a href="./champ_pages/Dr. Mundo.html"><img
+                src="./images/champion/DrMundo.png" class="icon">
+              <figcaption>Dr. Mundo</figcaption>
+            </a></div>
+          <div class="grid-item" id="Draven"><a href="./champ_pages/Draven.html"><img src="./images/champion/Draven.png"
+                class="icon">
+              <figcaption>Draven</figcaption>
+            </a></div>
+          <div class="grid-item" id="Ekko"><a href="./champ_pages/Ekko.html"><img src="./images/champion/Ekko.png"
+                class="icon">
+              <figcaption>Ekko</figcaption>
+            </a></div>
+          <div class="grid-item" id="Elise"><a href="./champ_pages/Elise.html"><img src="./images/champion/Elise.png"
+                class="icon">
+              <figcaption>Elise</figcaption>
+            </a></div>
+          <div class="grid-item" id="Evelynn"><a href="./champ_pages/Evelynn.html"><img
+                src="./images/champion/Evelynn.png" class="icon">
+              <figcaption>Evelynn</figcaption>
+            </a></div>
+          <div class="grid-item" id="Ezreal"><a href="./champ_pages/Ezreal.html"><img src="./images/champion/Ezreal.png"
+                class="icon">
+              <figcaption>Ezreal</figcaption>
+            </a></div>
+          <div class="grid-item" id="Fiddlesticks"><a href="./champ_pages/Fiddlesticks.html"><img
+                src="./images/champion/Fiddlesticks.png" class="icon">
+              <figcaption>Fiddlesticks</figcaption>
+            </a></div>
+          <div class="grid-item" id="Fiora"><a href="./champ_pages/Fiora.html"><img src="./images/champion/Fiora.png"
+                class="icon">
+              <figcaption>Fiora</figcaption>
+            </a></div>
+          <div class="grid-item" id="Fizz"><a href="./champ_pages/Fizz.html"><img src="./images/champion/Fizz.png"
+                class="icon">
+              <figcaption>Fizz</figcaption>
+            </a></div>
+          <div class="grid-item" id="Galio"><a href="./champ_pages/Galio.html"><img src="./images/champion/Galio.png"
+                class="icon">
+              <figcaption>Galio</figcaption>
+            </a></div>
+          <div class="grid-item" id="Gangplank"><a href="./champ_pages/Gangplank.html"><img
+                src="./images/champion/Gangplank.png" class="icon">
+              <figcaption>Gangplank</figcaption>
+            </a></div>
+          <div class="grid-item" id="Garen"><a href="./champ_pages/Garen.html"><img src="./images/champion/Garen.png"
+                class="icon">
+              <figcaption>Garen</figcaption>
+            </a></div>
+          <div class="grid-item" id="Gnar"><a href="./champ_pages/Gnar.html"><img src="./images/champion/Gnar.png"
+                class="icon">
+              <figcaption>Gnar</figcaption>
+            </a></div>
+          <div class="grid-item" id="Gragas"><a href="./champ_pages/Gragas.html"><img src="./images/champion/Gragas.png"
+                class="icon">
+              <figcaption>Gragas</figcaption>
+            </a></div>
+          <div class="grid-item" id="Graves"><a href="./champ_pages/Graves.html"><img src="./images/champion/Graves.png"
+                class="icon">
+              <figcaption>Graves</figcaption>
+            </a></div>
+          <div class="grid-item" id="Gwen"><a href="./champ_pages/Gwen.html"><img src="./images/champion/Gwen.png"
+                class="icon">
+              <figcaption>Gwen</figcaption>
+            </a></div>
+          <div class="grid-item" id="Hecarim"><a href="./champ_pages/Hecarim.html"><img
+                src="./images/champion/Hecarim.png" class="icon">
+              <figcaption>Hecarim</figcaption>
+            </a></div>
+          <div class="grid-item" id="Heimerdinger"><a href="./champ_pages/Heimerdinger.html"><img
+                src="./images/champion/Heimerdinger.png" class="icon">
+              <figcaption>Heimerdinger</figcaption>
+            </a></div>
+          <div class="grid-item" id="Illaoi"><a href="./champ_pages/Illaoi.html"><img src="./images/champion/Illaoi.png"
+                class="icon">
+              <figcaption>Illaoi</figcaption>
+            </a></div>
+          <div class="grid-item" id="Irelia"><a href="./champ_pages/Irelia.html"><img src="./images/champion/Irelia.png"
+                class="icon">
+              <figcaption>Irelia</figcaption>
+            </a></div>
+          <div class="grid-item" id="Ivern"><a href="./champ_pages/Ivern.html"><img src="./images/champion/Ivern.png"
+                class="icon">
+              <figcaption>Ivern</figcaption>
+            </a></div>
+          <div class="grid-item" id="Janna"><a href="./champ_pages/Janna.html"><img src="./images/champion/Janna.png"
+                class="icon">
+              <figcaption>Janna</figcaption>
+            </a></div>
+          <div class="grid-item" id="Jarvan IV"><a href="./champ_pages/Jarvan IV.html"><img
+                src="./images/champion/JarvanIV.png" class="icon">
+              <figcaption>Jarvan IV</figcaption>
+            </a></div>
+          <div class="grid-item" id="Jax"><a href="./champ_pages/Jax.html"><img src="./images/champion/Jax.png"
+                class="icon">
+              <figcaption>Jax</figcaption>
+            </a></div>
+          <div class="grid-item" id="Jayce"><a href="./champ_pages/Jayce.html"><img src="./images/champion/Jayce.png"
+                class="icon">
+              <figcaption>Jayce</figcaption>
+            </a></div>
+          <div class="grid-item" id="Jhin"><a href="./champ_pages/Jhin.html"><img src="./images/champion/Jhin.png"
+                class="icon">
+              <figcaption>Jhin</figcaption>
+            </a></div>
+          <div class="grid-item" id="Jinx"><a href="./champ_pages/Jinx.html"><img src="./images/champion/Jinx.png"
+                class="icon">
+              <figcaption>Jinx</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kai'Sa"><a href="./champ_pages/Kai'Sa.html"><img src="./images/champion/KaiSa.png"
+                class="icon">
+              <figcaption>Kai'Sa</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kalista"><a href="./champ_pages/Kalista.html"><img
+                src="./images/champion/Kalista.png" class="icon">
+              <figcaption>Kalista</figcaption>
+            </a></div>
+          <div class="grid-item" id="Karma"><a href="./champ_pages/Karma.html"><img src="./images/champion/Karma.png"
+                class="icon">
+              <figcaption>Karma</figcaption>
+            </a></div>
+          <div class="grid-item" id="Karthus"><a href="./champ_pages/Karthus.html"><img
+                src="./images/champion/Karthus.png" class="icon">
+              <figcaption>Karthus</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kassadin"><a href="./champ_pages/Kassadin.html"><img
+                src="./images/champion/Kassadin.png" class="icon">
+              <figcaption>Kassadin</figcaption>
+            </a></div>
+          <div class="grid-item" id="Katarina"><a href="./champ_pages/Katarina.html"><img
+                src="./images/champion/Katarina.png" class="icon">
+              <figcaption>Katarina</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kayle"><a href="./champ_pages/Kayle.html"><img src="./images/champion/Kayle.png"
+                class="icon">
+              <figcaption>Kayle</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kayn"><a href="./champ_pages/Kayn.html"><img src="./images/champion/Kayn.png"
+                class="icon">
+              <figcaption>Kayn</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kennen"><a href="./champ_pages/Kennen.html"><img src="./images/champion/Kennen.png"
+                class="icon">
+              <figcaption>Kennen</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kha'Zix"><a href="./champ_pages/Kha'Zix.html"><img
+                src="./images/champion/KhaZix.png" class="icon">
+              <figcaption>Kha'Zix</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kindred"><a href="./champ_pages/Kindred.html"><img
+                src="./images/champion/Kindred.png" class="icon">
+              <figcaption>Kindred</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kled"><a href="./champ_pages/Kled.html"><img src="./images/champion/Kled.png"
+                class="icon">
+              <figcaption>Kled</figcaption>
+            </a></div>
+          <div class="grid-item" id="Kog'Maw"><a href="./champ_pages/Kog'Maw.html"><img
+                src="./images/champion/KogMaw.png" class="icon">
+              <figcaption>Kog'Maw</figcaption>
+            </a></div>
+          <div class="grid-item" id="LeBlanc"><a href="./champ_pages/LeBlanc.html"><img
+                src="./images/champion/LeBlanc.png" class="icon">
+              <figcaption>LeBlanc</figcaption>
+            </a></div>
+          <div class="grid-item" id="Lee Sin"><a href="./champ_pages/Lee Sin.html"><img
+                src="./images/champion/LeeSin.png" class="icon">
+              <figcaption>Lee Sin</figcaption>
+            </a></div>
+          <div class="grid-item" id="Leona"><a href="./champ_pages/Leona.html"><img src="./images/champion/Leona.png"
+                class="icon">
+              <figcaption>Leona</figcaption>
+            </a></div>
+          <div class="grid-item" id="Lillia"><a href="./champ_pages/Lillia.html"><img src="./images/champion/Lillia.png"
+                class="icon">
+              <figcaption>Lillia</figcaption>
+            </a></div>
+          <div class="grid-item" id="Lissandra"><a href="./champ_pages/Lissandra.html"><img
+                src="./images/champion/Lissandra.png" class="icon">
+              <figcaption>Lissandra</figcaption>
+            </a></div>
+          <div class="grid-item" id="Lucian"><a href="./champ_pages/Lucian.html"><img src="./images/champion/Lucian.png"
+                class="icon">
+              <figcaption>Lucian</figcaption>
+            </a></div>
+          <div class="grid-item" id="Lulu"><a href="./champ_pages/Lulu.html"><img src="./images/champion/Lulu.png"
+                class="icon">
+              <figcaption>Lulu</figcaption>
+            </a></div>
+          <div class="grid-item" id="Lux"><a href="./champ_pages/Lux.html"><img src="./images/champion/Lux.png"
+                class="icon">
+              <figcaption>Lux</figcaption>
+            </a></div>
+          <div class="grid-item" id="Malphite"><a href="./champ_pages/Malphite.html"><img
+                src="./images/champion/Malphite.png" class="icon">
+              <figcaption>Malphite</figcaption>
+            </a></div>
+          <div class="grid-item" id="Malzahar"><a href="./champ_pages/Malzahar.html"><img
+                src="./images/champion/Malzahar.png" class="icon">
+              <figcaption>Malzahar</figcaption>
+            </a></div>
+          <div class="grid-item" id="Maokai"><a href="./champ_pages/Maokai.html"><img src="./images/champion/Maokai.png"
+                class="icon">
+              <figcaption>Maokai</figcaption>
+            </a></div>
+          <div class="grid-item" id="Master Yi"><a href="./champ_pages/Master Yi.html"><img
+                src="./images/champion/MasterYi.png" class="icon">
+              <figcaption>Master Yi</figcaption>
+            </a></div>
+          <div class="grid-item" id="Miss Fortune"><a href="./champ_pages/Miss Fortune.html"><img
+                src="./images/champion/MissFortune.png" class="icon">
+              <figcaption>Miss Fortune</figcaption>
+            </a></div>
+          <div class="grid-item" id="Mordekaiser"><a href="./champ_pages/Mordekaiser.html"><img
+                src="./images/champion/Mordekaiser.png" class="icon">
+              <figcaption>Mordekaiser</figcaption>
+            </a></div>
+          <div class="grid-item" id="Morgana"><a href="./champ_pages/Morgana.html"><img
+                src="./images/champion/Morgana.png" class="icon">
+              <figcaption>Morgana</figcaption>
+            </a></div>
+          <div class="grid-item" id="Nami"><a href="./champ_pages/Nami.html"><img src="./images/champion/Nami.png"
+                class="icon">
+              <figcaption>Nami</figcaption>
+            </a></div>
+          <div class="grid-item" id="Nasus"><a href="./champ_pages/Nasus.html"><img src="./images/champion/Nasus.png"
+                class="icon">
+              <figcaption>Nasus</figcaption>
+            </a></div>
+          <div class="grid-item" id="Nautilus"><a href="./champ_pages/Nautilus.html"><img
+                src="./images/champion/Nautilus.png" class="icon">
+              <figcaption>Nautilus</figcaption>
+            </a></div>
+          <div class="grid-item" id="Neeko"><a href="./champ_pages/Neeko.html"><img src="./images/champion/Neeko.png"
+                class="icon">
+              <figcaption>Neeko</figcaption>
+            </a></div>
+          <div class="grid-item" id="Nidalee"><a href="./champ_pages/Nidalee.html"><img
+                src="./images/champion/Nidalee.png" class="icon">
+              <figcaption>Nidalee</figcaption>
+            </a></div>
+          <div class="grid-item" id="Nocturne"><a href="./champ_pages/Nocturne.html"><img
+                src="./images/champion/Nocturne.png" class="icon">
+              <figcaption>Nocturne</figcaption>
+            </a></div>
+          <div class="grid-item" id="Nunu and Willump"><a href="./champ_pages/Nunu and Willump.html"><img
+                src="./images/champion/Nunu.png" class="icon">
+              <figcaption>Nunu and Willump</figcaption>
+            </a></div>
+          <div class="grid-item" id="Olaf"><a href="./champ_pages/Olaf.html"><img src="./images/champion/Olaf.png"
+                class="icon">
+              <figcaption>Olaf</figcaption>
+            </a></div>
+          <div class="grid-item" id="Orianna"><a href="./champ_pages/Orianna.html"><img
+                src="./images/champion/Orianna.png" class="icon">
+              <figcaption>Orianna</figcaption>
+            </a></div>
+          <div class="grid-item" id="Ornn"><a href="./champ_pages/Ornn.html"><img src="./images/champion/Ornn.png"
+                class="icon">
+              <figcaption>Ornn</figcaption>
+            </a></div>
+          <div class="grid-item" id="Pantheon"><a href="./champ_pages/Pantheon.html"><img
+                src="./images/champion/Pantheon.png" class="icon">
+              <figcaption>Pantheon</figcaption>
+            </a></div>
+          <div class="grid-item" id="Poppy"><a href="./champ_pages/Poppy.html"><img src="./images/champion/Poppy.png"
+                class="icon">
+              <figcaption>Poppy</figcaption>
+            </a></div>
+          <div class="grid-item" id="Pyke"><a href="./champ_pages/Pyke.html"><img src="./images/champion/Pyke.png"
+                class="icon">
+              <figcaption>Pyke</figcaption>
+            </a></div>
+          <div class="grid-item" id="Qiyana"><a href="./champ_pages/Qiyana.html"><img src="./images/champion/Qiyana.png"
+                class="icon">
+              <figcaption>Qiyana</figcaption>
+            </a></div>
+          <div class="grid-item" id="Quinn"><a href="./champ_pages/Quinn.html"><img src="./images/champion/Quinn.png"
+                class="icon">
+              <figcaption>Quinn</figcaption>
+            </a></div>
+          <div class="grid-item" id="Rakan"><a href="./champ_pages/Rakan.html"><img src="./images/champion/Rakan.png"
+                class="icon">
+              <figcaption>Rakan</figcaption>
+            </a></div>
+          <div class="grid-item" id="Rammus"><a href="./champ_pages/Rammus.html"><img src="./images/champion/Rammus.png"
+                class="icon">
+              <figcaption>Rammus</figcaption>
+            </a></div>
+          <div class="grid-item" id="Rek'Sai"><a href="./champ_pages/Rek'Sai.html"><img
+                src="./images/champion/RekSai.png" class="icon">
+              <figcaption>Rek'Sai</figcaption>
+            </a></div>
+          <div class="grid-item" id="Rell"><a href="./champ_pages/Rell.html"><img src="./images/champion/Rell.png"
+                class="icon">
+              <figcaption>Rell</figcaption>
+            </a></div>
+          <div class="grid-item" id="Renata Glasc"><a href="./champ_pages/Renata Glasc.html"><img
+                src="./images/champion/Renata.png" class="icon">
+              <figcaption>Renata Glasc</figcaption>
+            </a></div>
+          <div class="grid-item" id="Renekton"><a href="./champ_pages/Renekton.html"><img
+                src="./images/champion/Renekton.png" class="icon">
+              <figcaption>Renekton</figcaption>
+            </a></div>
+          <div class="grid-item" id="Rengar"><a href="./champ_pages/Rengar.html"><img src="./images/champion/Rengar.png"
+                class="icon">
+              <figcaption>Rengar</figcaption>
+            </a></div>
+          <div class="grid-item" id="Riven"><a href="./champ_pages/Riven.html"><img src="./images/champion/Riven.png"
+                class="icon">
+              <figcaption>Riven</figcaption>
+            </a></div>
+          <div class="grid-item" id="Rumble"><a href="./champ_pages/Rumble.html"><img src="./images/champion/Rumble.png"
+                class="icon">
+              <figcaption>Rumble</figcaption>
+            </a></div>
+          <div class="grid-item" id="Ryze"><a href="./champ_pages/Ryze.html"><img src="./images/champion/Ryze.png"
+                class="icon">
+              <figcaption>Ryze</figcaption>
+            </a></div>
+          <div class="grid-item" id="Samira"><a href="./champ_pages/Samira.html"><img src="./images/champion/Samira.png"
+                class="icon">
+              <figcaption>Samira</figcaption>
+            </a></div>
+          <div class="grid-item" id="Sejuani"><a href="./champ_pages/Sejuani.html"><img
+                src="./images/champion/Sejuani.png" class="icon">
+              <figcaption>Sejuani</figcaption>
+            </a></div>
+          <div class="grid-item" id="Senna"><a href="./champ_pages/Senna.html"><img src="./images/champion/Senna.png"
+                class="icon">
+              <figcaption>Senna</figcaption>
+            </a></div>
+          <div class="grid-item" id="Seraphine"><a href="./champ_pages/Seraphine.html"><img
+                src="./images/champion/Seraphine.png" class="icon">
+              <figcaption>Seraphine</figcaption>
+            </a></div>
+          <div class="grid-item" id="Sett"><a href="./champ_pages/Sett.html"><img src="./images/champion/Sett.png"
+                class="icon">
+              <figcaption>Sett</figcaption>
+            </a></div>
+          <div class="grid-item" id="Shaco"><a href="./champ_pages/Shaco.html"><img src="./images/champion/Shaco.png"
+                class="icon">
+              <figcaption>Shaco</figcaption>
+            </a></div>
+          <div class="grid-item" id="Shen"><a href="./champ_pages/Shen.html"><img src="./images/champion/Shen.png"
+                class="icon">
+              <figcaption>Shen</figcaption>
+            </a></div>
+          <div class="grid-item" id="Shyvana"><a href="./champ_pages/Shyvana.html"><img
+                src="./images/champion/Shyvana.png" class="icon">
+              <figcaption>Shyvana</figcaption>
+            </a></div>
+          <div class="grid-item" id="Singed"><a href="./champ_pages/Singed.html"><img src="./images/champion/Singed.png"
+                class="icon">
+              <figcaption>Singed</figcaption>
+            </a></div>
+          <div class="grid-item" id="Sion"><a href="./champ_pages/Sion.html"><img src="./images/champion/Sion.png"
+                class="icon">
+              <figcaption>Sion</figcaption>
+            </a></div>
+          <div class="grid-item" id="Sivir"><a href="./champ_pages/Sivir.html"><img src="./images/champion/Sivir.png"
+                class="icon">
+              <figcaption>Sivir</figcaption>
+            </a></div>
+          <div class="grid-item" id="Skarner"><a href="./champ_pages/Skarner.html"><img
+                src="./images/champion/Skarner.png" class="icon">
+              <figcaption>Skarner</figcaption>
+            </a></div>
+          <div class="grid-item" id="Sona"><a href="./champ_pages/Sona.html"><img src="./images/champion/Sona.png"
+                class="icon">
+              <figcaption>Sona</figcaption>
+            </a></div>
+          <div class="grid-item" id="Soraka"><a href="./champ_pages/Soraka.html"><img src="./images/champion/Soraka.png"
+                class="icon">
+              <figcaption>Soraka</figcaption>
+            </a></div>
+          <div class="grid-item" id="Swain"><a href="./champ_pages/Swain.html"><img src="./images/champion/Swain.png"
+                class="icon">
+              <figcaption>Swain</figcaption>
+            </a></div>
+          <div class="grid-item" id="Sylas"><a href="./champ_pages/Sylas.html"><img src="./images/champion/Sylas.png"
+                class="icon">
+              <figcaption>Sylas</figcaption>
+            </a></div>
+          <div class="grid-item" id="Syndra"><a href="./champ_pages/Syndra.html"><img src="./images/champion/Syndra.png"
+                class="icon">
+              <figcaption>Syndra</figcaption>
+            </a></div>
+          <div class="grid-item" id="Tahm Kench"><a href="./champ_pages/Tahm Kench.html"><img
+                src="./images/champion/TahmKench.png" class="icon">
+              <figcaption>Tahm Kench</figcaption>
+            </a></div>
+          <div class="grid-item" id="Taliyah"><a href="./champ_pages/Taliyah.html"><img
+                src="./images/champion/Taliyah.png" class="icon">
+              <figcaption>Taliyah</figcaption>
+            </a></div>
+          <div class="grid-item" id="Talon"><a href="./champ_pages/Talon.html"><img src="./images/champion/Talon.png"
+                class="icon">
+              <figcaption>Talon</figcaption>
+            </a></div>
+          <div class="grid-item" id="Taric"><a href="./champ_pages/Taric.html"><img src="./images/champion/Taric.png"
+                class="icon">
+              <figcaption>Taric</figcaption>
+            </a></div>
+          <div class="grid-item" id="Teemo"><a href="./champ_pages/Teemo.html"><img src="./images/champion/Teemo.png"
+                class="icon">
+              <figcaption>Teemo</figcaption>
+            </a></div>
+          <div class="grid-item" id="Thresh"><a href="./champ_pages/Thresh.html"><img src="./images/champion/Thresh.png"
+                class="icon">
+              <figcaption>Thresh</figcaption>
+            </a></div>
+          <div class="grid-item" id="Tristana"><a href="./champ_pages/Tristana.html"><img
+                src="./images/champion/Tristana.png" class="icon">
+              <figcaption>Tristana</figcaption>
+            </a></div>
+          <div class="grid-item" id="Trundle"><a href="./champ_pages/Trundle.html"><img
+                src="./images/champion/Trundle.png" class="icon">
+              <figcaption>Trundle</figcaption>
+            </a></div>
+          <div class="grid-item" id="Tryndamere"><a href="./champ_pages/Tryndamere.html"><img
+                src="./images/champion/Tryndamere.png" class="icon">
+              <figcaption>Tryndamere</figcaption>
+            </a></div>
+          <div class="grid-item" id="Twisted Fate"><a href="./champ_pages/Twisted Fate.html"><img
+                src="./images/champion/TwistedFate.png" class="icon">
+              <figcaption>Twisted Fate</figcaption>
+            </a></div>
+          <div class="grid-item" id="Twitch"><a href="./champ_pages/Twitch.html"><img src="./images/champion/Twitch.png"
+                class="icon">
+              <figcaption>Twitch</figcaption>
+            </a></div>
+          <div class="grid-item" id="Udyr"><a href="./champ_pages/Udyr.html"><img src="./images/champion/Udyr.png"
+                class="icon">
+              <figcaption>Udyr</figcaption>
+            </a></div>
+          <div class="grid-item" id="Urgot"><a href="./champ_pages/Urgot.html"><img src="./images/champion/Urgot.png"
+                class="icon">
+              <figcaption>Urgot</figcaption>
+            </a></div>
+          <div class="grid-item" id="Varus"><a href="./champ_pages/Varus.html"><img src="./images/champion/Varus.png"
+                class="icon">
+              <figcaption>Varus</figcaption>
+            </a></div>
+          <div class="grid-item" id="Vayne"><a href="./champ_pages/Vayne.html"><img src="./images/champion/Vayne.png"
+                class="icon">
+              <figcaption>Vayne</figcaption>
+            </a></div>
+          <div class="grid-item" id="Veigar"><a href="./champ_pages/Veigar.html"><img src="./images/champion/Veigar.png"
+                class="icon">
+              <figcaption>Veigar</figcaption>
+            </a></div>
+          <div class="grid-item" id="Vel'Koz"><a href="./champ_pages/Vel'Koz.html"><img
+                src="./images/champion/VelKoz.png" class="icon">
+              <figcaption>Vel'Koz</figcaption>
+            </a></div>
+          <div class="grid-item" id="Vex"><a href="./champ_pages/Vex.html"><img src="./images/champion/Vex.png"
+                class="icon">
+              <figcaption>Vex</figcaption>
+            </a></div>
+          <div class="grid-item" id="Vi"><a href="./champ_pages/Vi.html"><img src="./images/champion/Vi.png"
+                class="icon">
+              <figcaption>Vi</figcaption>
+            </a></div>
+          <div class="grid-item" id="Viego"><a href="./champ_pages/Viego.html"><img src="./images/champion/Viego.png"
+                class="icon">
+              <figcaption>Viego</figcaption>
+            </a></div>
+          <div class="grid-item" id="Viktor"><a href="./champ_pages/Viktor.html"><img src="./images/champion/Viktor.png"
+                class="icon">
+              <figcaption>Viktor</figcaption>
+            </a></div>
+          <div class="grid-item" id="Vladimir"><a href="./champ_pages/Vladimir.html"><img
+                src="./images/champion/Vladimir.png" class="icon">
+              <figcaption>Vladimir</figcaption>
+            </a></div>
+          <div class="grid-item" id="Volibear"><a href="./champ_pages/Volibear.html"><img
+                src="./images/champion/Volibear.png" class="icon">
+              <figcaption>Volibear</figcaption>
+            </a></div>
+          <div class="grid-item" id="Warwick"><a href="./champ_pages/Warwick.html"><img
+                src="./images/champion/Warwick.png" class="icon">
+              <figcaption>Warwick</figcaption>
+            </a></div>
+          <div class="grid-item" id="Wukong"><a href="./champ_pages/Wukong.html"><img
+                src="./images/champion/MonkeyKing.png" class="icon">
+              <figcaption>Wukong</figcaption>
+            </a></div>
+          <div class="grid-item" id="Xayah"><a href="./champ_pages/Xayah.html"><img src="./images/champion/Xayah.png"
+                class="icon">
+              <figcaption>Xayah</figcaption>
+            </a></div>
+          <div class="grid-item" id="Xerath"><a href="./champ_pages/Xerath.html"><img src="./images/champion/Xerath.png"
+                class="icon">
+              <figcaption>Xerath</figcaption>
+            </a></div>
+          <div class="grid-item" id="Xin Zhao"><a href="./champ_pages/Xin Zhao.html"><img
+                src="./images/champion/XinZhao.png" class="icon">
+              <figcaption>Xin Zhao</figcaption>
+            </a></div>
+          <div class="grid-item" id="Yasuo"><a href="./champ_pages/Yasuo.html"><img src="./images/champion/Yasuo.png"
+                class="icon">
+              <figcaption>Yasuo</figcaption>
+            </a></div>
+          <div class="grid-item" id="Yone"><a href="./champ_pages/Yone.html"><img src="./images/champion/Yone.png"
+                class="icon">
+              <figcaption>Yone</figcaption>
+            </a></div>
+          <div class="grid-item" id="Yorick"><a href="./champ_pages/Yorick.html"><img src="./images/champion/Yorick.png"
+                class="icon">
+              <figcaption>Yorick</figcaption>
+            </a></div>
+          <div class="grid-item" id="Yuumi"><a href="./champ_pages/Yuumi.html"><img src="./images/champion/Yuumi.png"
+                class="icon">
+              <figcaption>Yuumi</figcaption>
+            </a></div>
+          <div class="grid-item" id="Zac"><a href="./champ_pages/Zac.html"><img src="./images/champion/Zac.png"
+                class="icon">
+              <figcaption>Zac</figcaption>
+            </a></div>
+          <div class="grid-item" id="Zed"><a href="./champ_pages/Zed.html"><img src="./images/champion/Zed.png"
+                class="icon">
+              <figcaption>Zed</figcaption>
+            </a></div>
+          <div class="grid-item" id="Zeri"><a href="./champ_pages/Zeri.html"><img src="./images/champion/Zeri.png"
+                class="icon">
+              <figcaption>Zeri</figcaption>
+            </a></div>
+          <div class="grid-item" id="Ziggs"><a href="./champ_pages/Ziggs.html"><img src="./images/champion/Ziggs.png"
+                class="icon">
+              <figcaption>Ziggs</figcaption>
+            </a></div>
+          <div class="grid-item" id="Zilean"><a href="./champ_pages/Zilean.html"><img src="./images/champion/Zilean.png"
+                class="icon">
+              <figcaption>Zilean</figcaption>
+            </a></div>
+          <div class="grid-item" id="Zoe"><a href="./champ_pages/Zoe.html"><img src="./images/champion/Zoe.png"
+                class="icon">
+              <figcaption>Zoe</figcaption>
+            </a></div>
+          <div class="grid-item" id="Zyra"><a href="./champ_pages/Zyra.html"><img src="./images/champion/Zyra.png"
+                class="icon">
+              <figcaption>Zyra</figcaption>
+            </a></div>
+          <!--Example For adding new champion-->
+
+          <!--<div class="grid-item" id="Aatrox"><a href="./champ_pages/Aatrox.html"><img src="./images/champion/Aatrox.png"
+            class="icon">
+          <figcaption>Aatrox</figcaption>
+        </a></div>-->
+        </div>
       </div>
     </div>
 

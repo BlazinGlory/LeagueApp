@@ -21,7 +21,14 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-
+function openNav() {
+    document.getElementById("sidebar").style.width = "150px";
+    document.getElementById("main").style.marginLeft = "150px";
+}
+function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
 
 
 /*
@@ -34,6 +41,7 @@ saverunes.addEventListener('click', async event => {
 */
 
 window.onload = async event => {
+    document.addEventListener('auxclick', event => event.preventDefault());
     let num = 0;
     let champ = document.getElementById('champname').textContent;
     api.data.getrunes(champ, num);
@@ -44,8 +52,7 @@ window.onload = async event => {
     api.data.newpage(champ, num);
 }
 
-let page1 = document.getElementById('page1');
-page1.addEventListener('click', async event => {
+let page1 = document.getElementById('page1').addEventListener('click', async event => {
     let num = 0;
     let champ = document.getElementById('champname').textContent;
     api.data.getrunes(champ, num);
@@ -56,8 +63,7 @@ page1.addEventListener('click', async event => {
     api.data.newpage(champ, num);
 })
 
-let page2 = document.getElementById('page2');
-page2.addEventListener('click', async event => {
+let page2 = document.getElementById('page2').addEventListener('click', async event => {
     let num = 1;
     let champ = document.getElementById('champname').textContent;
     api.data.getrunes(champ, num);
@@ -67,8 +73,7 @@ page2.addEventListener('click', async event => {
     api.data.deleteRune(runenum);
     api.data.newpage(champ, num);
 })
-let page3 = document.getElementById('page3');
-page3.addEventListener('click', async event => {
+let page3 = document.getElementById('page3').addEventListener('click', async event => {
     let num = 2;
     let champ = document.getElementById('champname').textContent;
     api.data.getrunes(champ, num);
@@ -78,8 +83,7 @@ page3.addEventListener('click', async event => {
     api.data.deleteRune(runenum);
     api.data.newpage(champ, num);
 })
-let page4 = document.getElementById('page4');
-page4.addEventListener('click', async event => {
+let page4 = document.getElementById('page4').addEventListener('click', async event => {
     let num = 3;
     let champ = document.getElementById('champname').textContent;
     api.data.getrunes(champ, num);
@@ -89,8 +93,7 @@ page4.addEventListener('click', async event => {
     api.data.deleteRune(runenum);
     api.data.newpage(champ, num);
 })
-let page5 = document.getElementById('page5');
-page5.addEventListener('click', async event => {
+let page5 = document.getElementById('page5').addEventListener('click', async event => {
     let num = 4;
     let champ = document.getElementById('champname').textContent;
     api.data.getrunes(champ, num);

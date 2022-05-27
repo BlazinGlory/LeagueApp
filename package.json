@@ -15,7 +15,7 @@
     "target": "NSIS",
     "nsis": {
       "allowToChangeInstallationDirectory": true,
-      "oneClick": false
+      "oneClick": true
     }
   },
   "scripts": {

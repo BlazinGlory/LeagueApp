@@ -1,18 +1,16 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, ipcMain, net, dialog } = require('electron');
 const path = require('path');
-const { isMainThread } = require('worker_threads');
 const fetch = require('node-fetch');
 const fs = require('fs');
 const Datastore = require('nedb');
 const { join } = require('path');
 const dotenv = require('dotenv').config();
 const https = require('https');
-const { createServer } = require('http');
 const WebSocket = require('ws');
 
 const httpsAgent = new https.Agent({
-  //cert: fs.readFileSync("src/riotgames.pem"),
+  //cert: fs.readFileSync("./src/riotgames.pem"),
   rejectUnauthorized: false,
 });
 
@@ -47,7 +45,7 @@ function createWindow() {
       contextIsolation: true,
       preload: path.join(__dirname, "preload.js"),
     },
-
+    icon: __dirname+'/public/images/icon.png',
     x: 1230,
     y: 50,
   })
@@ -152,7 +150,7 @@ ipcMain.handle('name', async (event, name) => {
 
 // Get values from lockfile
 async function lockfile() {
-  let lockfile = await fs.promises.readFile('.env', 'utf8', (err, data) => {
+  let lockfile = await fs.promises.readFile('src/.env', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
       return;
@@ -356,9 +354,9 @@ ipcMain.handle('selectFolder', async (event, arg) => {
   process.env.PATH = result.filePaths[0];
   console.log(process.env.PATH);
 
-  let newenv = 'KEY='+process.env.KEY+'\n'+'PATH='+process.env.PATH;
+  let newenv = 'KEY=' + process.env.KEY + '\n' + 'PATH=' + process.env.PATH;
   if (process.env.KEY && process.env.PATH) {
-    await fs.writeFile('.env', newenv, (err, data) => {
+    await fs.writeFile('src/.env', newenv, (err, data) => {
       if (err) {
         console.log(err)
       } else {
@@ -377,36 +375,28 @@ ipcMain.handle('selectFolder', async (event, arg) => {
 socket()
 
 async function socket() {
-  try {
-    let lcu = await lockfile();
-    let port = lcu[1];
-    let password = lcu[2];
-  } catch (error) {
-    console.log('pulling lockfile values failed')
-  }
+  let lcu = await lockfile();
+  let port = lcu[1];
+  let password = lcu[2];
 
   // Create websocket & subscribe to events on startup
-  try {
-    const ws = new RiotWSProtocol(`wss://riot:${password}@localhost:${port}/`);
+  const ws = new RiotWSProtocol(`wss://riot:${password}@localhost:${port}/`);
 
-    ws.on('open', () => {
-      console.log('Websocket connected');
-      //.subscribe('OnJsonApiEvent', console.log);
-      // Listen for selected champ
-      ws.subscribe('OnJsonApiEvent_lol-champ-select_v1_current-champion', (currentchamp) => {
-        ;
-        // Find when champion selected, load page & runes
-        if (currentchamp.eventType !== 'Delete') {
-          let id = currentchamp.data;
-          let currentname = championroles[id][0].Name;
-          console.log(currentname);
-          window.loadFile('./src/public/champ_pages/' + currentname + '.html')
-        }
-      });
+  ws.on('open', () => {
+    console.log('Websocket connected');
+    //.subscribe('OnJsonApiEvent', console.log);
+    // Listen for selected champ
+    ws.subscribe('OnJsonApiEvent_lol-champ-select_v1_current-champion', (currentchamp) => {
+      ;
+      // Find when champion selected, load page & runes
+      if (currentchamp.eventType !== 'Delete') {
+        let id = currentchamp.data;
+        let currentname = championroles[id][0].Name;
+        console.log(currentname);
+        window.loadFile('./src/public/champ_pages/' + currentname + '.html')
+      }
     });
-  } catch {
-    console.log('could not connect to websocket')
-  }
+  });
 }
 
 // Defines actions in websocket

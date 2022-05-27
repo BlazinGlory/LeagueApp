@@ -26,16 +26,16 @@ $('#lcupull').on('click', () => {
 function openNav() {
     try {
         document.getElementById("sidebar").style.width = "150px";
-    document.getElementById("main").style.marginLeft = "150px";
+        document.getElementById("main").style.marginLeft = "150px";
     } catch {
         console.log('error opening sidebar')
     }
-    
+
 }
 function closeNav() {
     try {
         document.getElementById("sidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("main").style.marginLeft = "0";
     } catch {
         console.log('error closing sidebar')
     }
@@ -66,4 +66,10 @@ async function hidegrid() {
         let role = document.getElementById('rolefilter').value;
         api.data.searchchamps(search, role);
     })
+    $('#searchchamp').on('click', async function () {
+        let search = document.getElementById('choosechamp').value;
+        let role = document.getElementById('rolefilter').value;
+        api.data.searchchamps(search, role);
+    })
+
 }

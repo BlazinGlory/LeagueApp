@@ -44,6 +44,8 @@ window.onload = async event => {
     document.addEventListener('auxclick', event => event.preventDefault());
     let num = 0;
     let champ = document.getElementById('champname').textContent;
+    api.data.newpage(champ, num);
+    await new Promise(r => setTimeout(r, 50));
     api.data.getrunes(champ, num);
     api.data.runepage();
     await new Promise(r => setTimeout(r, 50));
@@ -55,6 +57,8 @@ window.onload = async event => {
 let page1 = document.getElementById('page1').addEventListener('click', async event => {
     let num = 0;
     let champ = document.getElementById('champname').textContent;
+    api.data.newpage(champ, num);
+    await new Promise(r => setTimeout(r, 50));
     api.data.getrunes(champ, num);
     api.data.runepage();
     await new Promise(r => setTimeout(r, 50));
@@ -66,6 +70,8 @@ let page1 = document.getElementById('page1').addEventListener('click', async eve
 let page2 = document.getElementById('page2').addEventListener('click', async event => {
     let num = 1;
     let champ = document.getElementById('champname').textContent;
+    api.data.newpage(champ, num);
+    await new Promise(r => setTimeout(r, 50));
     api.data.getrunes(champ, num);
     api.data.runepage();
     await new Promise(r => setTimeout(r, 50));
@@ -76,6 +82,8 @@ let page2 = document.getElementById('page2').addEventListener('click', async eve
 let page3 = document.getElementById('page3').addEventListener('click', async event => {
     let num = 2;
     let champ = document.getElementById('champname').textContent;
+    api.data.newpage(champ, num);
+    await new Promise(r => setTimeout(r, 50));
     api.data.getrunes(champ, num);
     api.data.runepage();
     await new Promise(r => setTimeout(r, 50));
@@ -86,6 +94,8 @@ let page3 = document.getElementById('page3').addEventListener('click', async eve
 let page4 = document.getElementById('page4').addEventListener('click', async event => {
     let num = 3;
     let champ = document.getElementById('champname').textContent;
+    api.data.newpage(champ, num);
+    await new Promise(r => setTimeout(r, 50));
     api.data.getrunes(champ, num);
     api.data.runepage();
     await new Promise(r => setTimeout(r, 50));
@@ -96,6 +106,8 @@ let page4 = document.getElementById('page4').addEventListener('click', async eve
 let page5 = document.getElementById('page5').addEventListener('click', async event => {
     let num = 4;
     let champ = document.getElementById('champname').textContent;
+    api.data.newpage(champ, num);
+    await new Promise(r => setTimeout(r, 50));
     api.data.getrunes(champ, num);
     api.data.runepage();
     await new Promise(r => setTimeout(r, 50));

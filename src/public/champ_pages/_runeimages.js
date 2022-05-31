@@ -21,15 +21,6 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-function openNav() {
-    document.getElementById("sidebar").style.width = "150px";
-    document.getElementById("main").style.marginLeft = "150px";
-}
-function closeNav() {
-    document.getElementById("sidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-}
-
 
 /*
 const saverunes = document.getElementById('saverunes');

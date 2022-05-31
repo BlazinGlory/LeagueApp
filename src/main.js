@@ -97,6 +97,8 @@ const runes = new Datastore('src/runes.db')
 runes.loadDatabase();
 const favorites = new Datastore('src/favorites.db')
 favorites.loadDatabase();
+const matchdb = new Datastore('src/data/Matches/matchdata.db')
+matchdb.loadDatabase();
 
 // Get runes from database
 ipcMain.handle('getrunes', async (event, champ) => {
@@ -377,71 +379,87 @@ socket()
 
 async function socket() {
 
-  const matchdb = new Datastore('src/data/Matches/matchdata.db')
-  matchdb.loadDatabase();
-  const limiter = new RateLimiter({ tokensPerInterval: 1, interval: 1300})
-
   //let tiers = ['GOLD', 'PLATINUM', 'DIAMOND'];
   // let tiers = ['IRON', 'BRONZE', 'SILVER', 'GOLD', 'PLATINUM', 'DIAMOND'];
   //let divisions = ['I', 'II', 'III', 'IV']
   let tiers = ['DIAMOND'];
   let divisions = ['IV'];
 
-  tiers.forEach( async (tier) => {
-    divisions.forEach( async (div) => {
+  tiers.forEach(async (tier) => {
+    divisions.forEach(async (div) => {
       let leagueurl = `${base}/lol/league/v4/entries/RANKED_SOLO_5x5/${tier}/${div}`;
       let tierresponse = await fetch(leagueurl, options);
       let tierbody = await tierresponse.json();
 
-      const sumurl = `${base}/lol/summoner/v4/summoners/${tierbody[0].summonerId}`;
-      const summonerresponse = await fetch(sumurl, options);
-      const summonerbody = await summonerresponse.json();
-      console.log(summonerbody.puuid);
+      /*
+      for (let i = 0; i < tierbody.length; i++) {
+        setTimeout(async () => {
+          console.log('Player ' + i + ':')
+          await getmatches(i, tierbody, tier, div)
+        }, 13000 * i)
+      }
+      */
+      for (let i = 0; i < tierbody.length; i++) {
+        const sumurl = `${base}/lol/summoner/v4/summoners/${tierbody[i].summonerId}`;
+        const summonerresponse = await fetch(sumurl, options);
+        const summonerbody = await summonerresponse.json();
+        console.log(summonerbody.puuid);
 
-      let matchurl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerbody.puuid}/ids?count=100`;
-      let response = await fetch(matchurl, options);
-      let body = await response.json();
-
-      body.forEach((match, i) => {
-        setTimeout( async () => {
-          let individualMatch = `https://americas.api.riotgames.com/lol/match/v5/matches/${match}`;
-          let matchresponse = await fetch(individualMatch, options);
-          let body = await matchresponse.json();
-
-          let data = {
-            'match': body.info.gameId,
-            'version': body.info.gameVersion,
-            'tier': tier,
-            'division': div,
-            'info': []
-          };
-          for (let i = 0; i < 10; i++) {
-            let runes = [body.info.participants[i].perks.styles[0].selections[0].perk, body.info.participants[i].perks.styles[0].selections[1].perk, body.info.participants[i].perks.styles[0].selections[2].perk, body.info.participants[i].perks.styles[0].selections[3].perk, body.info.participants[i].perks.styles[1].selections[0].perk, body.info.participants[i].perks.styles[1].selections[1].perk, body.info.participants[i].perks.statPerks.offense, body.info.participants[0].perks.statPerks.flex, body.info.participants[0].perks.statPerks.defense];
-            let items = [body.info.participants[i].item0, body.info.participants[i].item1, body.info.participants[i].item2, body.info.participants[i].item3, body.info.participants[i].item4, body.info.participants[i].item5, body.info.participants[i].item6];
-
-            data.info[i] = {
-              'champ': body.info.participants[i].championName,
-              'position': body.info.participants[i].individualPosition,
-              'win': body.info.participants[i].win,
-              'runes': runes,
-              'items': items
-            }
+        let matchurl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerbody.puuid}/ids?count=100`;
+        let response = await fetch(matchurl, options);
+        let body = await response.json();
+        let filtered = [];
+        body.forEach((item) => {
+          if (item.replace('NA1_', '') > 4319330135) {
+            filtered.push(item);
           }
+          ;
 
-          matchdb.find({ match: body.info.gameId }, function (err, result) {
-            if (result[0]) {
-              console.log('match '+body.info.gameId+' already in database');
-            } else {
-              matchdb.insert(data);
-              console.log('match ' + body.info.gameId + ' added to database');
+        })
+        console.log(filtered);
+
+        filtered.forEach((match, i) => {
+          setTimeout(async () => {
+            let individualMatch = `https://americas.api.riotgames.com/lol/match/v5/matches/${match}`;
+            let matchresponse = await fetch(individualMatch, options);
+            let body = await matchresponse.json();
+
+            let data = {
+              'match': body.info.gameId,
+              'version': body.info.gameVersion,
+              'tier': tier,
+              'division': div,
+              'info': []
+            };
+            for (let i = 0; i < 10; i++) {
+              let runes = [body.info.participants[i].perks.styles[0].selections[0].perk, body.info.participants[i].perks.styles[0].selections[1].perk, body.info.participants[i].perks.styles[0].selections[2].perk, body.info.participants[i].perks.styles[0].selections[3].perk, body.info.participants[i].perks.styles[1].selections[0].perk, body.info.participants[i].perks.styles[1].selections[1].perk, body.info.participants[i].perks.statPerks.offense, body.info.participants[0].perks.statPerks.flex, body.info.participants[0].perks.statPerks.defense];
+              let items = [body.info.participants[i].item0, body.info.participants[i].item1, body.info.participants[i].item2, body.info.participants[i].item3, body.info.participants[i].item4, body.info.participants[i].item5, body.info.participants[i].item6];
+
+              data.info[i] = {
+                'champ': body.info.participants[i].championName,
+                'position': body.info.participants[i].individualPosition,
+                'win': body.info.participants[i].win,
+                'runes': runes,
+                'items': items
+              }
             }
-          })
-        }, 900 * i)
-      })
 
+            matchdb.find({ match: body.info.gameId }, function (err, result) {
+              if (result[0]) {
+                console.log('match ' + body.info.gameId + ' already in database');
+              } else {
+                matchdb.insert(data);
+                console.log('match ' + body.info.gameId + ' added to database');
+              }
+            })
+          }, 1300 * i)
+        })
 
+      }
     })
   })
+
+
 
 
 
@@ -595,3 +613,62 @@ async function champcsv() {
     console.log('error parsing champions.csv')
   }
 };
+
+/*
+async function getmatches(j, tierbody, tier, div) {
+  const sumurl = `${base}/lol/summoner/v4/summoners/${tierbody[j].summonerId}`;
+  const summonerresponse = await fetch(sumurl, options);
+  const summonerbody = await summonerresponse.json();
+  console.log(summonerbody.puuid);
+
+  let matchurl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerbody.puuid}/ids?count=100`;
+  let response = await fetch(matchurl, options);
+  let body = await response.json();
+  let filtered = [];
+  body.forEach((item) => {
+    if (item.replace('NA1_', '') > 4319330135) {
+      filtered.push(item);
+    }
+    ;
+
+  })
+  console.log(filtered);
+
+  filtered.forEach((match, i) => {
+    setTimeout(async () => {
+      let individualMatch = `https://americas.api.riotgames.com/lol/match/v5/matches/${match}`;
+      let matchresponse = await fetch(individualMatch, options);
+      let body = await matchresponse.json();
+
+      let data = {
+        'match': body.info.gameId,
+        'version': body.info.gameVersion,
+        'tier': tier,
+        'division': div,
+        'info': []
+      };
+      for (let i = 0; i < 10; i++) {
+        let runes = [body.info.participants[i].perks.styles[0].selections[0].perk, body.info.participants[i].perks.styles[0].selections[1].perk, body.info.participants[i].perks.styles[0].selections[2].perk, body.info.participants[i].perks.styles[0].selections[3].perk, body.info.participants[i].perks.styles[1].selections[0].perk, body.info.participants[i].perks.styles[1].selections[1].perk, body.info.participants[i].perks.statPerks.offense, body.info.participants[0].perks.statPerks.flex, body.info.participants[0].perks.statPerks.defense];
+        let items = [body.info.participants[i].item0, body.info.participants[i].item1, body.info.participants[i].item2, body.info.participants[i].item3, body.info.participants[i].item4, body.info.participants[i].item5, body.info.participants[i].item6];
+
+        data.info[i] = {
+          'champ': body.info.participants[i].championName,
+          'position': body.info.participants[i].individualPosition,
+          'win': body.info.participants[i].win,
+          'runes': runes,
+          'items': items
+        }
+      }
+
+      matchdb.find({ match: body.info.gameId }, function (err, result) {
+        if (result[0]) {
+          console.log('match ' + body.info.gameId + ' already in database');
+        } else {
+          matchdb.insert(data);
+          console.log('match ' + body.info.gameId + ' added to database');
+        }
+      })
+    }, 1300 * i)
+  })
+}
+*/

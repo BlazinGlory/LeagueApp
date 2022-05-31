@@ -974,9 +974,9 @@ const API = {
                     }
                 })
             }
+            let champs = [];
 
             let slow = search.toLowerCase();
-            let champs = [];
             rolefiltered.forEach(async (item) => {
                 if (item) {
                     low = item.toLowerCase();
@@ -984,7 +984,32 @@ const API = {
                         champs.push(item);
                     }
                 }
+                // Dealing with special characters in search
+                if (item.includes(' ')) {
+                    low = item.toLowerCase().replace(' ', '');
+                    if (low.includes(slow)) {
+                        champs.push(item);
+                    }
+                }
+                if (item.includes("'")) {
+                    low = item.toLowerCase().replace("'", '');
+                    if (low.includes(slow)) {
+                        champs.push(item);
+                    }
+                }
+                if (item.includes('.')) {
+                    low = item.toLowerCase().replace('.', '');
+                    if (low.includes(slow)) {
+                        champs.push(item);
+                    }
+                    low = item.toLowerCase().replace('. ', '');
+                    if (low.includes(slow)) {
+                        champs.push(item);
+                    }
+                }
+
             })
+
             let notsearched = allchamps.filter(x => !champs.includes(x)).concat(champs.filter(x => !allchamps.includes(x)));
 
             champs.forEach(async (item) => {

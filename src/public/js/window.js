@@ -17,3 +17,12 @@ function maximizeapp () {
 function closeapp () {
     api.window.close();
 }
+
+function openNav() {
+    document.getElementById("sidebar").style.width = "150px";
+    document.getElementById("main").style.marginLeft = "150px";
+}
+function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}

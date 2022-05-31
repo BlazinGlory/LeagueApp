@@ -6,7 +6,7 @@
   "author": "BlazinGlory",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^18.1.0",
+    "electron": "^19.0.1",
     "electron-builder": "^23.0.3"
   },
   "build": {
@@ -23,12 +23,13 @@
     "build": "electron-builder"
   },
   "dependencies": {
-    "dotenv": "^16.0.0",
+    "dotenv": "^16.0.1",
     "fs": "^0.0.1-security",
     "jquery": "^3.6.0",
     "jqueryui": "^1.11.1",
+    "limiter": "^2.1.0",
     "nedb": "^1.8.0",
     "node-fetch": "2",
-    "ws": "^8.6.0"
+    "ws": "^8.7.0"
   }
 }

@@ -36,14 +36,36 @@
 
     <div class="main" id="main">
 
-        <button id="directory">Choose Folder</button><br>
-        <button id="lcupull">Pull LCU values</button><br>
+      <div class="search">
+        <div>
+          <h2>Tier</h2>
+          <button class="tierbtn" id="IRON" onclick="setTier('IRON')">Iron</button>
+          <button class="tierbtn" id="BRONZE" onclick="setTier('BRONZE')">Bronze</button>
+          <button class="tierbtn" id="SILVER" onclick="setTier('SILVER')">Silver</button>
+          <button class="tierbtn" id="GOLD" onclick="setTier('GOLD')">Gold</button>
+          <button class="tierbtn" id="PLATINUM" onclick="setTier('PLATINUM')">Platinum</button>
+          <button class="tierbtn" id="DIAMOND" onclick="setTier('DIAMOND')">Diamond</button>
+        </div>
+        <div>
+          <h2>Division</h2>
+          <button class="divbtn" id="I" onclick="setDiv('I')">I</button>
+          <button class="divbtn" id="II" onclick="setDiv('II')">II</button>
+          <button class="divbtn" id="III" onclick="setDiv('III')">III</button>
+          <button class="divbtn" id="IV" onclick="setDiv('IV')">IV</button>
+        </div> 
+        <br>
+        <div>
+          <span id="tier">DIAMOND</span>
+          <span id="division">IV</span>
+          <button id="matchsearch">Pull Data</button>
+        </div>
+      </div>
 
 
     </div>
 
     <script src="../public/js/window.js"></script>
-    <script src="settings.js"></script>
+    <script src="matchData.js"></script>
 
 </body>
 

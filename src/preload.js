@@ -1019,6 +1019,18 @@ const API = {
                 document.getElementById(item).classList.add("hidden");
             })
         },
+        matchsearch: async (tier, div) => {
+            const result = await ipcRenderer.invoke('matchsearch', tier, div);
+            if (result) {
+                console.log('Match Search Success?');
+            } else {
+                console.log('Match Search Error?')
+            }
+        },
+        testmatch: async (matchid) => {
+            const result = await ipcRenderer.invoke('testmatch', matchid);
+            console.log(result);
+        },
     },
 
 

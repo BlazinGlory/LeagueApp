@@ -15,7 +15,9 @@ const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
 
-const base = "https://na1.api.riotgames.com";
+const region = 'https://na1'
+
+const base = ".api.riotgames.com";
 let key = process.env.KEY;
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
@@ -146,7 +148,7 @@ ipcMain.on('close', () => {
 
 // Call League API for summoner id 
 ipcMain.handle('name', async (event, name) => {
-  const sumurl = `${base}/lol/summoner/v4/summoners/by-name/${name}`;
+  const sumurl = `${region}${base}/lol/summoner/v4/summoners/by-name/${name}`;
   const response = await fetch(sumurl, options);
   const body = await response.json();
   return body;
@@ -374,51 +376,24 @@ ipcMain.handle('selectFolder', async (event, arg) => {
   return result
 })
 
+// Call for Match Search
+ipcMain.handle('matchsearch', async (event, tier, div) => {
+  let result = await matchget(tier, div);
+  return result
+})
+
+// Individual Match Search
+ipcMain.handle('testmatch', async (event, matchid) => {
+  let result = await individualMatch(matchid);
+  return result
+})
+
 
 
 // Web Socket stuff idk havent even tried it yet
 socket()
 
 async function socket() {
-
-  //let tiers = ['GOLD', 'PLATINUM', 'DIAMOND'];
-  // let tiers = ['IRON', 'BRONZE', 'SILVER', 'GOLD', 'PLATINUM', 'DIAMOND'];
-  //let divisions = ['I', 'II', 'III', 'IV']
-  let tiers = ['DIAMOND'];
-  let divisions = ['IV'];
-
-  tiers.forEach(async (tier) => {
-    divisions.forEach(async (div) => {
-      let leagueurl = `${base}/lol/league/v4/entries/RANKED_SOLO_5x5/${tier}/${div}`;
-      let tierresponse = await fetch(leagueurl, options);
-      let tierbody = await tierresponse.json();
-
-      const timer = ms => new Promise(res => setTimeout(res, ms))
-
-      for (let i = 0; i < tierbody.length; i++) {
-        let sumsearched = await new Promise((resolve, reject) => {
-          summonerdb.count({ sumid: tierbody[i].summonerId }, function (err, result) {
-            err ? reject(err) : resolve(result);
-          })
-        })
-        console.log('Player ',i,': searched: ',sumsearched)
-        if (sumsearched == 0) {
-          let val = await callmatches(i, tierbody, tier, div)
-          await timer(val)
-          summonerdb.insert({ 'sumid': tierbody[i].summonerId })
-        }
-      }
-
-
-
-    })
-  })
-
-
-
-
-
-
 
   try {
     let lcu = await lockfile();
@@ -569,9 +544,35 @@ async function champcsv() {
   }
 };
 
-async function callmatches(i, tierbody, tier, div) {
+async function matchget(tier, div) {
+  let page = 1;
+  let leagueurl = `${region}${base}/lol/league/v4/entries/RANKED_SOLO_5x5/${tier}/${div}?page=${page}`;
+  let tierresponse = await fetch(leagueurl, options);
+  let tierbody = await tierresponse.json();
+  
+
+  const timer = ms => new Promise(res => setTimeout(res, ms))
+
+  console.log('\n'+tier+' '+div+' Page '+page+':\n')
+  for (let i = 0; i < tierbody.length; i++) {
+    let sumsearched = await new Promise((resolve, reject) => {
+      summonerdb.count({ sumid: tierbody[i].summonerId }, function (err, result) {
+        err ? reject(err) : resolve(result);
+      })
+    })
+    console.log('Player ', i, ': searched: ', sumsearched)
+    if (sumsearched == 0) {
+      let val = await callmatches(i, tierbody[i].summonerId, tier, div)
+      await timer(val)
+      summonerdb.insert({ 'sumid': tierbody[i].summonerId })
+    }
+  }
+  console.log('\n'+tier+' '+div+' Page '+page+' completed\n')
+}
+
+async function callmatches(i, summonerid, tier, div) {
   console.log('Player ' + i + ':')
-  const sumurl = `${base}/lol/summoner/v4/summoners/${tierbody[i].summonerId}`;
+  const sumurl = `${region}${base}/lol/summoner/v4/summoners/${summonerid}`;
   const summonerresponse = await fetch(sumurl, options);
   const summonerbody = await summonerresponse.json();
   console.log(summonerbody.puuid);
@@ -582,7 +583,7 @@ async function callmatches(i, tierbody, tier, div) {
 
   let versionfiltered = [];
   body.forEach(async (item) => {
-    if (item.replace('NA1_', '') > 4319330135) {
+    if (item.replace('NA1_', '') > 4319340204) {
       versionfiltered.push(item)
     }
   })
@@ -639,4 +640,11 @@ async function callmatches(i, tierbody, tier, div) {
   console.log(filtered.length);
   let timeoutval = filtered.length * 1300;
   return timeoutval
+}
+
+async function individualMatch(match) {
+  let individualMatch = `https://americas.api.riotgames.com/lol/match/v5/matches/NA1_${match}`;
+      let matchresponse = await fetch(individualMatch, options);
+      let body = await matchresponse.json();
+      return body
 }

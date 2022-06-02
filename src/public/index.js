@@ -10,6 +10,10 @@ $('#directory').on('click', () => {
     api.selectFolder()
 })
 
+$('#matchapi').on('click', () => {
+    let matchid = document.getElementById('matchid').value;
+    api.data.testmatch(matchid)
+})
 
 
 // Pull LCU values on load

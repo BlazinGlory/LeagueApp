@@ -1,0 +1,10 @@
+created database for match data
+
+added page for pulling said data
+
+want to add:
+ability for different regions (async because can have 100 calls per 2 mins per region)
+iterate through multiple pages of results for each tier/div.
+
+parse matchdata database into another database with overall champ winrates, pickrate, total games, bans?
+winrates of runes, pickrates of runes

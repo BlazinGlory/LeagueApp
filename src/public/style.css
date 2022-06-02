@@ -166,8 +166,18 @@ a {
   color: white;
 }
 
+.active {
+  background-color: rgb(117, 117, 117);
+  color: rgb(255, 255, 255);
+}
+
 .hidden {
   display: none;
+}
+
+.search {
+  align-items: center;
+  text-align: center;
 }
 
 ::-webkit-scrollbar {

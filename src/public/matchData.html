@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>React App</title>
+</head>
+
+<body>
+
+  <nav>
+    <div class="left-nav">
+      <span class="nav-link" id="sidebtn" onclick="openNav()">&#x2699;</span>
+      <a href="index.html"><span class="nav-link">Home</span></a>
+    </div>
+
+    <div class="right-nav">
+      <span class="nav-link" id="minimize">&minus;</span>
+      <span class="nav-link" id="maximize">&#x25FB;</span>
+      <span class="nav-link" id="closeapp">&#10006;</span>
+    </div>
+  </nav>
+
+  <div class="notnav">
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="settings.html">Settings</a>
+      <a href="matchData.html">Update Database</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="main" id="main">
+
+        <button id="directory">Choose Folder</button><br>
+        <button id="lcupull">Pull LCU values</button><br>
+
+
+    </div>
+
+    <script src="../public/js/window.js"></script>
+    <script src="settings.js"></script>
+
+</body>
+
+</html>

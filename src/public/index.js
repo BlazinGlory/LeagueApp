@@ -6,6 +6,11 @@ try {
     console.log('error with api call')
 }
 
+$('#sumsubmit').on('click', () => {
+    api.data.name(document.getElementById('name').value);
+})
+
+
 $('#directory').on('click', () => {
     api.selectFolder()
 })

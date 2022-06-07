@@ -1,0 +1,55 @@
+queue ids
+https://static.developer.riotgames.com/docs/lol/queues.json
+
+epoch timestamp
+https://www.epochconverter.com/
+
+
+
+create database using matchdata.db that has every champion?
+
+get clash folder and that stuff from main pc
+
+
+parse through each match 10 times?
+
+add different regions (need to make version based instead of match number before this)
+
+make cache with highest match number found of old version for each region, and tell to search above that
+store in .txt?
+localStorage?
+
+loop pages until result returns []
+
+
+add master, gm, challenger
+
+get more than 100 matches by getting start / end time and going further back?
+
+win rate (total wins / losses)
+pick rate (wins+losses / total games)
+total games played in sample
+bans?
+
+
+
+script for renaming all champs in champ_pages from Shyvana to Name
+
+Favorites
+
+add object with .name & .picture to differentiate between names of tiles and champ name (wukong, monkey king)
+use to parse favorites
+
+.perks
+.item0 - 6
+.individualPosition
+.championName
+.win
+
+
+find rank of player at time of match instead of after its happened
+
+
+automatically determine region
+
+profile page to show match history

@@ -54,9 +54,9 @@ function createWindow() {
   })
 
   // and load the url of the app.
-  window.loadFile('./src/public/index.html')
-
+  //window.loadFile('./src/public/index.html')
   // window.loadFile('./src/public/champ_pages/shyvana.html')
+  window.loadFile('./src/public/matchData.html')
 
   // Open the DevTools.
   window.webContents.openDevTools()
@@ -156,6 +156,7 @@ ipcMain.handle('name', async (event, name) => {
 
 // Get values from lockfile
 async function lockfile() {
+  // read .env and get path
   let lockfile = await fs.promises.readFile('src/.env', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
@@ -544,58 +545,69 @@ async function champcsv() {
   }
 };
 
+// get all players of rank (tier, div)
+// only one page works at a time rn (204 from each tier)
 async function matchget(tier, div) {
-  let page = 1;
-  let leagueurl = `${region}${base}/lol/league/v4/entries/RANKED_SOLO_5x5/${tier}/${div}?page=${page}`;
-  let tierresponse = await fetch(leagueurl, options);
-  let tierbody = await tierresponse.json();
-  
 
   const timer = ms => new Promise(res => setTimeout(res, ms))
+    let fulltimeout = 2000;
 
-  console.log('\n'+tier+' '+div+' Page '+page+':\n')
-  for (let i = 0; i < tierbody.length; i++) {
-    let sumsearched = await new Promise((resolve, reject) => {
-      summonerdb.count({ sumid: tierbody[i].summonerId }, function (err, result) {
-        err ? reject(err) : resolve(result);
+  for (let page = 1; page < 100; page++) {
+
+    let leagueurl = `${region}${base}/lol/league/v4/entries/RANKED_SOLO_5x5/${tier}/${div}?page=${page}`;
+    let tierresponse = await fetch(leagueurl, options);
+    let tierbody = await tierresponse.json();
+
+    const timer = ms => new Promise(res => setTimeout(res, ms))
+    let fulltimeout = 2000;
+    let playertimeout = 1300;
+
+    console.log('\n' + tier + ' ' + div + ' Page ' + page + ':\n')
+    for (let i = 0; i < tierbody.length; i++) {
+      let sumsearched = await new Promise((resolve, reject) => {
+        summonerdb.count({ sumid: tierbody[i].summonerId }, function (err, result) {
+          err ? reject(err) : resolve(result);
+        })
       })
-    })
-    console.log('Player ', i, ': searched: ', sumsearched)
-    if (sumsearched == 0) {
-      let val = await callmatches(i, tierbody[i].summonerId, tier, div)
-      await timer(val)
-      summonerdb.insert({ 'sumid': tierbody[i].summonerId })
+      console.log('Player ', i, ': searched: ', sumsearched)
+      if (sumsearched == 0) {
+        await timer(playertimeout)
+        let val = await callmatches(i, tierbody[i].summonerId, tier, div)
+        await timer(val)
+        summonerdb.insert({ 'sumid': tierbody[i].summonerId })
+        fulltimeout = fulltimeout + val;
+      }
     }
+    console.log('\n' + tier + ' ' + div + ' Page ' + page + ' completed\n')
   }
-  console.log('\n'+tier+' '+div+' Page '+page+' completed\n')
+  await timer(fulltimeout);
 }
 
+
+
+// Call for last 100 matches of player
+// Want to make so that filters based on version not match id
 async function callmatches(i, summonerid, tier, div) {
   console.log('Player ' + i + ':')
   const sumurl = `${region}${base}/lol/summoner/v4/summoners/${summonerid}`;
   const summonerresponse = await fetch(sumurl, options);
   const summonerbody = await summonerresponse.json();
-  console.log(summonerbody.puuid);
-  let sumid = summonerbody.puuid;
-  let matchurl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerbody.puuid}/ids?count=100`;
+  console.log('Summoner ID: ', summonerid)
+  console.log('PUUID: ', summonerbody.puuid);
+
+  let matchurl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerbody.puuid}/ids?queue=420&count=100&startTime=1653602975`;
   let response = await fetch(matchurl, options);
   let body = await response.json();
 
-  let versionfiltered = [];
-  body.forEach(async (item) => {
-    if (item.replace('NA1_', '') > 4319340204) {
-      versionfiltered.push(item)
-    }
-  })
   let filtered = []
-  for (i = 0; i < versionfiltered.length; i++) {
+  for (i = 0; i < body.length; i++) {
     let num = await new Promise((resolve, reject) => {
-      matchdb.count({ match: parseInt(versionfiltered[i].replace('NA1_', '')) }, function (err, result) {
+      matchdb.count({ match: parseInt(body[i].replace('NA1_', '')) }, function (err, result) {
         err ? reject(err) : resolve(result);
       })
     })
     if (num == 0) {
-      filtered.push(versionfiltered[i]);
+      filtered.push(body[i]);
     }
   }
   console.log(filtered)
@@ -642,9 +654,10 @@ async function callmatches(i, summonerid, tier, div) {
   return timeoutval
 }
 
+// Call for individual match id
 async function individualMatch(match) {
   let individualMatch = `https://americas.api.riotgames.com/lol/match/v5/matches/NA1_${match}`;
-      let matchresponse = await fetch(individualMatch, options);
-      let body = await matchresponse.json();
-      return body
+  let matchresponse = await fetch(individualMatch, options);
+  let body = await matchresponse.json();
+  return body
 }

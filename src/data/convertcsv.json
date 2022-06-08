@@ -1,2104 +1,1282 @@
 {
-   "1": [
-      {
-         "Name": "Annie",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "2": [
-      {
-         "Name": "Olaf",
-         "Top": "OP",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "3": [
-      {
-         "Name": "Galio",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "OP",
-         "FIELD8": ""
-      }
-   ],
-   "4": [
-      {
-         "Name": "Twisted Fate",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "5": [
-      {
-         "Name": "Xin Zhao",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "6": [
-      {
-         "Name": "Urgot",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "7": [
-      {
-         "Name": "LeBlanc",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "8": [
-      {
-         "Name": "Vladimir",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "9": [
-      {
-         "Name": "Fiddlesticks",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "10": [
-      {
-         "Name": "Kayle",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "11": [
-      {
-         "Name": "Master Yi",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "12": [
-      {
-         "Name": "Alistar",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "13": [
-      {
-         "Name": "Ryze",
-         "Top": "OP",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "14": [
-      {
-         "Name": "Sion",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "15": [
-      {
-         "Name": "Sivir",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "16": [
-      {
-         "Name": "Soraka",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "17": [
-      {
-         "Name": "Teemo",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "18": [
-      {
-         "Name": "Tristana",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "19": [
-      {
-         "Name": "Warwick",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "20": [
-      {
-         "Name": "Nunu and Willump",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "21": [
-      {
-         "Name": "Miss Fortune",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "22": [
-      {
-         "Name": "Ashe",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "23": [
-      {
-         "Name": "Tryndamere",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "24": [
-      {
-         "Name": "Jax",
-         "Top": "Yes",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "25": [
-      {
-         "Name": "Morgana",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "26": [
-      {
-         "Name": "Zilean",
-         "Top": "",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "27": [
-      {
-         "Name": "Singed",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "28": [
-      {
-         "Name": "Evelynn",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "29": [
-      {
-         "Name": "Twitch",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "30": [
-      {
-         "Name": "Karthus",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "31": [
-      {
-         "Name": "Cho'Gath",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "32": [
-      {
-         "Name": "Amumu",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "33": [
-      {
-         "Name": "Rammus",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "34": [
-      {
-         "Name": "Anivia",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "35": [
-      {
-         "Name": "Shaco",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "OP",
-         "FIELD8": ""
-      }
-   ],
-   "36": [
-      {
-         "Name": "Draven",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "37": [
-      {
-         "Name": "Sona",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "38": [
-      {
-         "Name": "Kassadin",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "39": [
-      {
-         "Name": "Irelia",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "40": [
-      {
-         "Name": "Janna",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "41": [
-      {
-         "Name": "Gangplank",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "42": [
-      {
-         "Name": "Corki",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "43": [
-      {
-         "Name": "Karma",
-         "Top": "OP",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "44": [
-      {
-         "Name": "Taric",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "45": [
-      {
-         "Name": "Veigar",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "48": [
-      {
-         "Name": "Trundle",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "50": [
-      {
-         "Name": "Swain",
-         "Top": "",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "OP",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "51": [
-      {
-         "Name": "Caitlyn",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "53": [
-      {
-         "Name": "Blitzcrank",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "54": [
-      {
-         "Name": "Malphite",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "55": [
-      {
-         "Name": "Katarina",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "56": [
-      {
-         "Name": "Nocturne",
-         "Top": "OP",
-         "Jg": "Yes",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "57": [
-      {
-         "Name": "Maokai",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "OP",
-         "FIELD8": ""
-      }
-   ],
-   "58": [
-      {
-         "Name": "Renekton",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "59": [
-      {
-         "Name": "Jarvan IV",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "60": [
-      {
-         "Name": "Elise",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "61": [
-      {
-         "Name": "Orianna",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "62": [
-      {
-         "Name": "Wukong",
-         "Top": "Yes",
-         "Jg": "OP",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "63": [
-      {
-         "Name": "Brand",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "64": [
-      {
-         "Name": "Lee Sin",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "67": [
-      {
-         "Name": "Vayne",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "68": [
-      {
-         "Name": "Rumble",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "69": [
-      {
-         "Name": "Cassiopeia",
-         "Top": "OP",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "OP",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "72": [
-      {
-         "Name": "Skarner",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "74": [
-      {
-         "Name": "Heimerdinger",
-         "Top": "OP",
-         "Jg": "",
-         "Mid": "Official",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "75": [
-      {
-         "Name": "Nasus",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "76": [
-      {
-         "Name": "Nidalee",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "77": [
-      {
-         "Name": "Udyr",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "78": [
-      {
-         "Name": "Poppy",
-         "Top": "Yes",
-         "Jg": "OP",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "OP",
-         "FIELD8": ""
-      }
-   ],
-   "79": [
-      {
-         "Name": "Gragas",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "80": [
-      {
-         "Name": "Pantheon",
-         "Top": "OP",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "81": [
-      {
-         "Name": "Ezreal",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "82": [
-      {
-         "Name": "Mordekaiser",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "83": [
-      {
-         "Name": "Yorick",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "84": [
-      {
-         "Name": "Akali",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "85": [
-      {
-         "Name": "Kennen",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "86": [
-      {
-         "Name": "Garen",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "89": [
-      {
-         "Name": "Leona",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "90": [
-      {
-         "Name": "Malzahar",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "91": [
-      {
-         "Name": "Talon",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "92": [
-      {
-         "Name": "Riven",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "96": [
-      {
-         "Name": "Kog'Maw",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "98": [
-      {
-         "Name": "Shen",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "OP",
-         "FIELD8": ""
-      }
-   ],
-   "99": [
-      {
-         "Name": "Lux",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "101": [
-      {
-         "Name": "Xerath",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "102": [
-      {
-         "Name": "Shyvana",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "103": [
-      {
-         "Name": "Ahri",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "104": [
-      {
-         "Name": "Graves",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "105": [
-      {
-         "Name": "Fizz",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "106": [
-      {
-         "Name": "Volibear",
-         "Top": "Yes",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "107": [
-      {
-         "Name": "Rengar",
-         "Top": "OP",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "110": [
-      {
-         "Name": "Varus",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "111": [
-      {
-         "Name": "Nautilus",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "112": [
-      {
-         "Name": "Viktor",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "113": [
-      {
-         "Name": "Sejuani",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "114": [
-      {
-         "Name": "Fiora",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "115": [
-      {
-         "Name": "Ziggs",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Official",
-         "Ad": "OP",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "117": [
-      {
-         "Name": "Lulu",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "119": [
-      {
-         "Name": "Dr. Mundo",
-         "Top": "Yes",
-         "Jg": "OP",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "120": [
-      {
-         "Name": "Hecarim",
-         "Top": "OP",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "121": [
-      {
-         "Name": "Kha'Zix",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "122": [
-      {
-         "Name": "Darius",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "126": [
-      {
-         "Name": "Jayce",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "127": [
-      {
-         "Name": "Lissandra",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "131": [
-      {
-         "Name": "Diana",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "133": [
-      {
-         "Name": "Quinn",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "134": [
-      {
-         "Name": "Syndra",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "136": [
-      {
-         "Name": "Aurelion Sol",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "141": [
-      {
-         "Name": "Kayn",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "142": [
-      {
-         "Name": "Zoe",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "143": [
-      {
-         "Name": "Zyra",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "145": [
-      {
-         "Name": "Kai'Sa",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "147": [
-      {
-         "Name": "Seraphine",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "150": [
-      {
-         "Name": "Gnar",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "154": [
-      {
-         "Name": "Zac",
-         "Top": "OP",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "OP",
-         "FIELD8": ""
-      }
-   ],
-   "157": [
-      {
-         "Name": "Yasuo",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "161": [
-      {
-         "Name": "Vel'Koz",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "163": [
-      {
-         "Name": "Taliyah",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "164": [
-      {
-         "Name": "Camille",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "166": [
-      {
-         "Name": "Akshan",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "201": [
-      {
-         "Name": "Braum",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "202": [
-      {
-         "Name": "Jhin",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "203": [
-      {
-         "Name": "Kindred",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "221": [
-      {
-         "Name": "Zeri",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "222": [
-      {
-         "Name": "Jinx",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "223": [
-      {
-         "Name": "Tahm Kench",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "234": [
-      {
-         "Name": "Viego",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "235": [
-      {
-         "Name": "Senna",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "OP",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "236": [
-      {
-         "Name": "Lucian",
-         "Top": "OP",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "238": [
-      {
-         "Name": "Zed",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "240": [
-      {
-         "Name": "Kled",
-         "Top": "Yes",
-         "Jg": "OP",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "245": [
-      {
-         "Name": "Ekko",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "246": [
-      {
-         "Name": "Qiyana",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "254": [
-      {
-         "Name": "Vi",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "266": [
-      {
-         "Name": "Aatrox",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "267": [
-      {
-         "Name": "Nami",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "268": [
-      {
-         "Name": "Azir",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "350": [
-      {
-         "Name": "Yuumi",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "360": [
-      {
-         "Name": "Samira",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": ".",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "412": [
-      {
-         "Name": "Thresh",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "420": [
-      {
-         "Name": "Illaoi",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "421": [
-      {
-         "Name": "Rek'Sai",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "427": [
-      {
-         "Name": "Ivern",
-         "Top": "",
-         "Jg": "Yes",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "429": [
-      {
-         "Name": "Kalista",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "432": [
-      {
-         "Name": "Bard",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "497": [
-      {
-         "Name": "Rakan",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "498": [
-      {
-         "Name": "Xayah",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "516": [
-      {
-         "Name": "Ornn",
-         "Top": "Yes",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "517": [
-      {
-         "Name": "Sylas",
-         "Top": "Yes",
-         "Jg": "Yes",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "518": [
-      {
-         "Name": "Neeko",
-         "Top": "",
-         "Jg": "",
-         "Mid": "Yes",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "523": [
-      {
-         "Name": "Aphelios",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "Yes",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "526": [
-      {
-         "Name": "Rell",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": ".",
-         "FIELD8": ""
-      }
-   ],
-   "555": [
-      {
-         "Name": "Pyke",
-         "Top": "",
-         "Jg": "",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "711": [
-      {
-         "Name": "Vex",
-         "Top": "",
-         "Jg": "",
-         "Mid": ".",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "777": [
-      {
-         "Name": "Yone",
-         "Top": ".",
-         "Jg": "",
-         "Mid": ".",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "875": [
-      {
-         "Name": "Sett",
-         "Top": "Yes",
-         "Jg": "Yes",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "876": [
-      {
-         "Name": "Lillia",
-         "Top": "OP",
-         "Jg": "Yes",
-         "Mid": "OP",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "887": [
-      {
-         "Name": "Gwen",
-         "Top": "Official",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ],
-   "888": [
-      {
-         "Name": "Renata Glasc",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "Yes",
-         "FIELD8": ""
-      }
-   ],
-   "": [
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      },
-      {
-         "Name": "",
-         "Top": "",
-         "Jg": "",
-         "Mid": "",
-         "Ad": "",
-         "Sup": "",
-         "FIELD8": ""
-      }
-   ]
+   "1": {
+      "Name": "Annie",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "2": {
+      "Name": "Olaf",
+      "Top": "OP",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "3": {
+      "Name": "Galio",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": "OP"
+   },
+   "4": {
+      "Name": "Twisted Fate",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "5": {
+      "Name": "Xin Zhao",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "6": {
+      "Name": "Urgot",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "7": {
+      "Name": "LeBlanc",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "8": {
+      "Name": "Vladimir",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "9": {
+      "Name": "Fiddlesticks",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "10": {
+      "Name": "Kayle",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "11": {
+      "Name": "Master Yi",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "12": {
+      "Name": "Alistar",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "13": {
+      "Name": "Ryze",
+      "Top": "OP",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "14": {
+      "Name": "Sion",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "15": {
+      "Name": "Sivir",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "16": {
+      "Name": "Soraka",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "17": {
+      "Name": "Teemo",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "18": {
+      "Name": "Tristana",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "19": {
+      "Name": "Warwick",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "20": {
+      "Name": "Nunu and Willump",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "21": {
+      "Name": "Miss Fortune",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "22": {
+      "Name": "Ashe",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "23": {
+      "Name": "Tryndamere",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "24": {
+      "Name": "Jax",
+      "Top": "Yes",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "25": {
+      "Name": "Morgana",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "26": {
+      "Name": "Zilean",
+      "Top": "",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "27": {
+      "Name": "Singed",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "28": {
+      "Name": "Evelynn",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "29": {
+      "Name": "Twitch",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "30": {
+      "Name": "Karthus",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "31": {
+      "Name": "Cho'Gath",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "32": {
+      "Name": "Amumu",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "33": {
+      "Name": "Rammus",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "34": {
+      "Name": "Anivia",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "35": {
+      "Name": "Shaco",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": "OP"
+   },
+   "36": {
+      "Name": "Draven",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "37": {
+      "Name": "Sona",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "38": {
+      "Name": "Kassadin",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "39": {
+      "Name": "Irelia",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "40": {
+      "Name": "Janna",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "41": {
+      "Name": "Gangplank",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "42": {
+      "Name": "Corki",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "43": {
+      "Name": "Karma",
+      "Top": "OP",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "44": {
+      "Name": "Taric",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "45": {
+      "Name": "Veigar",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "48": {
+      "Name": "Trundle",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "50": {
+      "Name": "Swain",
+      "Top": "",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "OP",
+      "Sup": "Yes"
+   },
+   "51": {
+      "Name": "Caitlyn",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "53": {
+      "Name": "Blitzcrank",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "54": {
+      "Name": "Malphite",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "55": {
+      "Name": "Katarina",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "56": {
+      "Name": "Nocturne",
+      "Top": "OP",
+      "Jg": "Yes",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "57": {
+      "Name": "Maokai",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "OP"
+   },
+   "58": {
+      "Name": "Renekton",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "59": {
+      "Name": "Jarvan IV",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "60": {
+      "Name": "Elise",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "61": {
+      "Name": "Orianna",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "62": {
+      "Name": "Wukong",
+      "Top": "Yes",
+      "Jg": "OP",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "63": {
+      "Name": "Brand",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "64": {
+      "Name": "Lee Sin",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "67": {
+      "Name": "Vayne",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "68": {
+      "Name": "Rumble",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "69": {
+      "Name": "Cassiopeia",
+      "Top": "OP",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "OP",
+      "Sup": ""
+   },
+   "72": {
+      "Name": "Skarner",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "74": {
+      "Name": "Heimerdinger",
+      "Top": "OP",
+      "Jg": "",
+      "Mid": "Official",
+      "AD": "",
+      "Sup": ""
+   },
+   "75": {
+      "Name": "Nasus",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "76": {
+      "Name": "Nidalee",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "77": {
+      "Name": "Udyr",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "78": {
+      "Name": "Poppy",
+      "Top": "Yes",
+      "Jg": "OP",
+      "Mid": "",
+      "AD": "",
+      "Sup": "OP"
+   },
+   "79": {
+      "Name": "Gragas",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "80": {
+      "Name": "Pantheon",
+      "Top": "OP",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "81": {
+      "Name": "Ezreal",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "82": {
+      "Name": "Mordekaiser",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "83": {
+      "Name": "Yorick",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "84": {
+      "Name": "Akali",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "85": {
+      "Name": "Kennen",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "86": {
+      "Name": "Garen",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "89": {
+      "Name": "Leona",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "90": {
+      "Name": "Malzahar",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "91": {
+      "Name": "Talon",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "92": {
+      "Name": "Riven",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "96": {
+      "Name": "Kog'Maw",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "98": {
+      "Name": "Shen",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "OP"
+   },
+   "99": {
+      "Name": "Lux",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "101": {
+      "Name": "Xerath",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "102": {
+      "Name": "Shyvana",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "103": {
+      "Name": "Ahri",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "104": {
+      "Name": "Graves",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "105": {
+      "Name": "Fizz",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "106": {
+      "Name": "Volibear",
+      "Top": "Yes",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "107": {
+      "Name": "Rengar",
+      "Top": "OP",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "110": {
+      "Name": "Varus",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "111": {
+      "Name": "Nautilus",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "112": {
+      "Name": "Viktor",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "113": {
+      "Name": "Sejuani",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "114": {
+      "Name": "Fiora",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "115": {
+      "Name": "Ziggs",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Official",
+      "AD": "OP",
+      "Sup": ""
+   },
+   "117": {
+      "Name": "Lulu",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "119": {
+      "Name": "Dr. Mundo",
+      "Top": "Yes",
+      "Jg": "OP",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "120": {
+      "Name": "Hecarim",
+      "Top": "OP",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "121": {
+      "Name": "Kha'Zix",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "122": {
+      "Name": "Darius",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "126": {
+      "Name": "Jayce",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "127": {
+      "Name": "Lissandra",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "131": {
+      "Name": "Diana",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "133": {
+      "Name": "Quinn",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "134": {
+      "Name": "Syndra",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "136": {
+      "Name": "Aurelion Sol",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "141": {
+      "Name": "Kayn",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "142": {
+      "Name": "Zoe",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "143": {
+      "Name": "Zyra",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "145": {
+      "Name": "Kai'Sa",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "147": {
+      "Name": "Seraphine",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "150": {
+      "Name": "Gnar",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "154": {
+      "Name": "Zac",
+      "Top": "OP",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": "OP"
+   },
+   "157": {
+      "Name": "Yasuo",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "161": {
+      "Name": "Vel'Koz",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "163": {
+      "Name": "Taliyah",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "164": {
+      "Name": "Camille",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "166": {
+      "Name": "Akshan",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "200": {
+      "Name": "Bel'Veth",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "201": {
+      "Name": "Braum",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "202": {
+      "Name": "Jhin",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "203": {
+      "Name": "Kindred",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "221": {
+      "Name": "Zeri",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "222": {
+      "Name": "Jinx",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "223": {
+      "Name": "Tahm Kench",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "234": {
+      "Name": "Viego",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "235": {
+      "Name": "Senna",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "OP",
+      "Sup": "Yes"
+   },
+   "236": {
+      "Name": "Lucian",
+      "Top": "OP",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "238": {
+      "Name": "Zed",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "240": {
+      "Name": "Kled",
+      "Top": "Yes",
+      "Jg": "OP",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "245": {
+      "Name": "Ekko",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "246": {
+      "Name": "Qiyana",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "254": {
+      "Name": "Vi",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "266": {
+      "Name": "Aatrox",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "267": {
+      "Name": "Nami",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "268": {
+      "Name": "Azir",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "350": {
+      "Name": "Yuumi",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "360": {
+      "Name": "Samira",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": ".",
+      "Sup": ""
+   },
+   "412": {
+      "Name": "Thresh",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "420": {
+      "Name": "Illaoi",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "421": {
+      "Name": "Rek'Sai",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "427": {
+      "Name": "Ivern",
+      "Top": "",
+      "Jg": "Yes",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "429": {
+      "Name": "Kalista",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "432": {
+      "Name": "Bard",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "497": {
+      "Name": "Rakan",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "498": {
+      "Name": "Xayah",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "516": {
+      "Name": "Ornn",
+      "Top": "Yes",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "517": {
+      "Name": "Sylas",
+      "Top": "Yes",
+      "Jg": "Yes",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "518": {
+      "Name": "Neeko",
+      "Top": "",
+      "Jg": "",
+      "Mid": "Yes",
+      "AD": "",
+      "Sup": ""
+   },
+   "523": {
+      "Name": "Aphelios",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "Yes",
+      "Sup": ""
+   },
+   "526": {
+      "Name": "Rell",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "."
+   },
+   "555": {
+      "Name": "Pyke",
+      "Top": "",
+      "Jg": "",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "711": {
+      "Name": "Vex",
+      "Top": "",
+      "Jg": "",
+      "Mid": ".",
+      "AD": "",
+      "Sup": ""
+   },
+   "777": {
+      "Name": "Yone",
+      "Top": ".",
+      "Jg": "",
+      "Mid": ".",
+      "AD": "",
+      "Sup": ""
+   },
+   "875": {
+      "Name": "Sett",
+      "Top": "Yes",
+      "Jg": "Yes",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   },
+   "876": {
+      "Name": "Lillia",
+      "Top": "OP",
+      "Jg": "Yes",
+      "Mid": "OP",
+      "AD": "",
+      "Sup": ""
+   },
+   "887": {
+      "Name": "Gwen",
+      "Top": "Official",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": ""
+   },
+   "888": {
+      "Name": "Renata Glasc",
+      "Top": "",
+      "Jg": "",
+      "Mid": "",
+      "AD": "",
+      "Sup": "Yes"
+   }
 }

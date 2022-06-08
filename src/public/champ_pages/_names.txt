@@ -11,6 +11,7 @@ Ashe
 Aurelion Sol
 Azir
 Bard
+Bel'Veth
 Blitzcrank
 Brand
 Braum

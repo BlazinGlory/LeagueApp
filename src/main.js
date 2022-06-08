@@ -358,9 +358,13 @@ ipcMain.handle('selectFolder', async (event, arg) => {
     buttonLabel: 'Choose Folder',
     properties: ['openDirectory']
   })
-  console.log('folder path selected: ', result.filePaths[0])
-  process.env.PATH = result.filePaths[0];
-  console.log(process.env.PATH);
+  
+  if (result.filePaths[0] === undefined) {
+    console.log('Folder not selected')
+  } else {
+    console.log('folder path selected: ', result.filePaths[0]);
+    process.env.PATH = result.filePaths[0];
+    console.log(process.env.PATH);  
 
   let newenv = 'KEY=' + process.env.KEY + '\n' + 'PATH=' + process.env.PATH;
   if (process.env.KEY && process.env.PATH) {
@@ -375,6 +379,7 @@ ipcMain.handle('selectFolder', async (event, arg) => {
     console.log('.env file failed to save');
   }
   return result
+}
 })
 
 // Call for Match Search
@@ -495,7 +500,7 @@ async function champdata() {
 }
 
 // Gets champion name and roles by id
-// Use this website https://www.convertcsv.com/csv-to-json.htm to convert champ csv data to file.
+// Use this website https://www.convertcsv.com/csv-to-json.htm to convert champ csv data to file. Select csv to keyed json
 async function champroles() {
   try {
     let champdata = await fs.promises.readFile('./src/data/convertcsv.json', 'utf8', (err, data) => {
@@ -508,7 +513,7 @@ async function champroles() {
     let values = JSON.parse(champdata);
     let roledata = [];
     for (let key in values) {
-      roledata[key] = values[key][0];
+      roledata[key] = values[key];
     }
     return roledata;
   } catch (error) {
@@ -552,11 +557,12 @@ async function matchget(tier, div) {
   const timer = ms => new Promise(res => setTimeout(res, ms))
     let fulltimeout = 2000;
 
-  for (let page = 1; page < 100; page++) {
+  for (let page = 1; page < 1000; page++) {
 
     let leagueurl = `${region}${base}/lol/league/v4/entries/RANKED_SOLO_5x5/${tier}/${div}?page=${page}`;
     let tierresponse = await fetch(leagueurl, options);
     let tierbody = await tierresponse.json();
+    if (tierbody == []) {break};
 
     const timer = ms => new Promise(res => setTimeout(res, ms))
     let fulltimeout = 2000;
@@ -584,7 +590,6 @@ async function matchget(tier, div) {
 }
 
 
-
 // Call for last 100 matches of player
 // Want to make so that filters based on version not match id
 async function callmatches(i, summonerid, tier, div) {
@@ -595,7 +600,7 @@ async function callmatches(i, summonerid, tier, div) {
   console.log('Summoner ID: ', summonerid)
   console.log('PUUID: ', summonerbody.puuid);
 
-  let matchurl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerbody.puuid}/ids?queue=420&count=100&startTime=1653602975`;
+  let matchurl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerbody.puuid}/ids?queue=420&count=100&startTime=1654683563`;
   let response = await fetch(matchurl, options);
   let body = await response.json();
 
